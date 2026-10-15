@@ -1,0 +1,13 @@
+
+> thus-spoke-zakura-web@0.1.0 test
+> vitest run src/features/wallet/MineDialog.test.tsx
+
+
+ RUN  v5.0.1 /Users/zeeshan/zakura-fix-281/web
+
+
+ Test Files  1 passed (1)
+      Tests  16 passed (16)
+   Start at  18:47:26
+   Duration  3.34s (tests 58%, environment 22%, import 11%, transform 6%, setup 3%)
+

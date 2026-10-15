@@ -1,0 +1,16 @@
+
+> thus-spoke-zakura-web@0.1.0 test
+> vitest run --maxWorkers=1
+
+
+ RUN  v5.0.1 /Users/zeeshan/zakura-fix-281/web
+
+
+ Test Files  27 passed (27)
+      Tests  296 passed (296)
+   Start at  18:49:57
+   Duration  41.09s (tests 71%, environment 19%, import 6%, setup 2%, transform 1%)
+
+    Isolate  27 workers spawned · ~342ms startup each (spawn + environment, per file)
+             at least ~8.89s faster with isolate: false — reuses workers across files instead of one per file
+

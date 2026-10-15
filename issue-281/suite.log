@@ -1,0 +1,100 @@
+
+> thus-spoke-zakura-web@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.1 /Users/zeeshan/zakura-fix-281/web
+
+ ❯ src/features/wallet/RequestDialog.test.tsx (4 tests | 2 failed) 11543ms
+   ❯ RequestDialog (4)
+     × uses one generated URI for the text, QR code, and copy button 5038ms
+     × never exposes a stale request while generation is pending 5397ms
+ ❯ src/features/wallet/FaucetDialog.test.tsx (9 tests | 1 failed) 20920ms
+   ❯ FaucetDialog (9)
+     × reuses the idempotency key in a new tab after the response is lost (durable only: false) 5877ms
+ ❯ src/features/wallet/WalletPage.test.tsx (17 tests | 1 failed) 31214ms
+   ❯ WalletPage (17)
+     × prefers this tab's send key when matching saved payments have different keys 5551ms
+ ❯ src/features/wallet/SendDialog.test.tsx (65 tests | 2 failed) 53010ms
+   ❯ SendDialog (65)
+     × submits same-account ironwood → transparent 5171ms
+     × submits same-account transparent → ironwood 6007ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/wallet/FaucetDialog.test.tsx > FaucetDialog > reuses the idempotency key in a new tab after the response is lost (durable only: false)
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ src/features/wallet/FaucetDialog.test.tsx:119:25
+    117|   });
+    118|
+    119|   it.each([false, true])(
+       |                         ^
+    120|     'reuses the idempotency key in a new tab after the response is los…
+    121|     async (durableOnly) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  src/features/wallet/RequestDialog.test.tsx > RequestDialog > uses one generated URI for the text, QR code, and copy button
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ src/features/wallet/RequestDialog.test.tsx:66:3
+     64|   });
+     65|
+     66|   it('uses one generated URI for the text, QR code, and copy button', …
+       |   ^
+     67|     renderWithProviders(<RequestDialog open onOpenChange={vi.fn()} acc…
+     68|     await selectAccount('Account 3');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  src/features/wallet/RequestDialog.test.tsx > RequestDialog > never exposes a stale request while generation is pending
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ src/features/wallet/RequestDialog.test.tsx:115:3
+    113|   });
+    114|
+    115|   it('never exposes a stale request while generation is pending', asyn…
+       |   ^
+    116|     let resolveSecond: ((response: Response) => void) | undefined;
+    117|     fetchMock.mockRestore();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+ FAIL  src/features/wallet/SendDialog.test.tsx > SendDialog > submits same-account ironwood → transparent
+ FAIL  src/features/wallet/SendDialog.test.tsx > SendDialog > submits same-account transparent → ironwood
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ src/features/wallet/SendDialog.test.tsx:144:14
+    142|     ['ironwood', 'transparent', 'Ironwood (shielded)', 'Transparent (p…
+    143|     ['transparent', 'ironwood', 'Transparent (public)', 'Ironwood (shi…
+    144|   ] as const)(
+       |              ^
+    145|     'submits same-account %s → %s',
+    146|     async (source, destination, sourceLabel, destLabel) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/6]⎯
+
+ FAIL  src/features/wallet/WalletPage.test.tsx > WalletPage > prefers this tab's send key when matching saved payments have different keys
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ src/features/wallet/WalletPage.test.tsx:204:39
+    202|   );
+    203|
+    204|   it.each(['send', 'faucet'] as const)(
+       |                                       ^
+    205|     "prefers this tab's %s key when matching saved payments have diffe…
+    206|     async (kind) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/6]⎯
+
+
+ Test Files  4 failed | 23 passed (27)
+      Tests  6 failed | 290 passed (296)
+   Start at  18:48:22
+   Duration  58.78s (tests 52%, environment 28%, import 12%, transform 4%, setup 3%)
+
+Environment  jsdom was created 27 times · 85.83s total, 28% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

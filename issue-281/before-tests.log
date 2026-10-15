@@ -1,0 +1,82 @@
+
+> thus-spoke-zakura-web@0.1.0 test
+> vitest run src/features/wallet/MineDialog.test.tsx
+
+
+ RUN  v5.0.1 /Users/zeeshan/zakura-fix-281/web
+
+ ❯ src/features/wallet/MineDialog.test.tsx (16 tests | 5 failed) 1824ms
+   ❯ MineDialog (16)
+     × keeps Mine usable and blocks POST when session storage getter fails 21ms
+     × keeps Mine usable and blocks POST when session storage getItem fails 173ms
+     × keeps Mine usable and blocks POST when session storage setItem fails 46ms
+     × keeps Mine usable and blocks POST when session storage removeItem fails 50ms
+     × keeps the retained key when a retry cannot access storage, then reuses it after recovery 36ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/wallet/MineDialog.test.tsx > MineDialog > keeps Mine usable and blocks POST when session storage getter fails
+SecurityError: Access denied
+ ❯ deny src/features/wallet/MineDialog.test.tsx:47:15
+     45|       );
+     46|       const deny = () => {
+     47|         throw new DOMException('Access denied', 'SecurityError');
+       |               ^
+     48|       };
+     49|       const storageSpy = failure === 'getter'
+ ❯ operationKey src/hooks/mutations.ts:45:17
+ ❯ useStartMining src/hooks/mutations.ts:239:21
+ ❯ MineDialog src/features/wallet/MineDialog.tsx:21:16
+ ❯ Object.react_stack_bottom_frame ../../zakura-241-investigation/web/node_modules/react-dom/cjs/react-dom-client.development.js:28571:20
+ ❯ renderWithHooks ../../zakura-241-investigation/web/node_modules/react-dom/cjs/react-dom-client.development.js:8030:22
+ ❯ updateFunctionComponent ../../zakura-241-investigation/web/node_modules/react-dom/cjs/react-dom-client.development.js:10569:19
+ ❯ beginWork ../../zakura-241-investigation/web/node_modules/react-dom/cjs/react-dom-client.development.js:12205:18
+ ❯ runWithFiberInDEV ../../zakura-241-investigation/web/node_modules/react-dom/cjs/react-dom-client.development.js:1048:13
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  src/features/wallet/MineDialog.test.tsx > MineDialog > keeps Mine usable and blocks POST when session storage getItem fails
+ FAIL  src/features/wallet/MineDialog.test.tsx > MineDialog > keeps Mine usable and blocks POST when session storage setItem fails
+ FAIL  src/features/wallet/MineDialog.test.tsx > MineDialog > keeps Mine usable and blocks POST when session storage removeItem fails
+Error: expect(element).toHaveTextContent()
+
+Expected element to have text content:
+  /session storage/i
+Received:
+  Unable to start mining: Something went wrong.
+ ❯ src/features/wallet/MineDialog.test.tsx:56:48
+     54|       await waitFor(() => expect(screen.getByRole('button', { name: 'M…
+     55|       await userEvent.click(screen.getByRole('button', { name: 'Mine b…
+     56|       expect(await screen.findByRole('alert')).toHaveTextContent(/sess…
+       |                                                ^
+     57|       expect(fetchSpy.mock.calls.filter((call) => call[1]?.method === …
+     58|       await userEvent.keyboard('{Escape}');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  src/features/wallet/MineDialog.test.tsx > MineDialog > keeps the retained key when a retry cannot access storage, then reuses it after recovery
+SecurityError: Access denied
+ ❯ src/features/wallet/MineDialog.test.tsx:79:13
+     77|     first.unmount();
+     78|     const denied = vi.spyOn(window, 'sessionStorage', 'get').mockImple…
+     79|       throw new DOMException('Access denied', 'SecurityError');
+       |             ^
+     80|     });
+     81|     renderWithProviders(<MineDialog open onOpenChange={vi.fn()} />);
+ ❯ operationKey src/hooks/mutations.ts:45:17
+ ❯ useStartMining src/hooks/mutations.ts:239:21
+ ❯ MineDialog src/features/wallet/MineDialog.tsx:21:16
+ ❯ Object.react_stack_bottom_frame ../../zakura-241-investigation/web/node_modules/react-dom/cjs/react-dom-client.development.js:28571:20
+ ❯ renderWithHooks ../../zakura-241-investigation/web/node_modules/react-dom/cjs/react-dom-client.development.js:8030:22
+ ❯ updateFunctionComponent ../../zakura-241-investigation/web/node_modules/react-dom/cjs/react-dom-client.development.js:10569:19
+ ❯ beginWork ../../zakura-241-investigation/web/node_modules/react-dom/cjs/react-dom-client.development.js:12205:18
+ ❯ runWithFiberInDEV ../../zakura-241-investigation/web/node_modules/react-dom/cjs/react-dom-client.development.js:1048:13
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  5 failed | 11 passed (16)
+   Start at  18:46:51
+   Duration  3.44s (tests 55%, environment 23%, import 12%, transform 6%, setup 3%)
+
