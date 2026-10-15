@@ -1,0 +1,86 @@
+{
+  "status": {
+    "instance": "zakura-verify-281",
+    "node": {
+      "chain": "test",
+      "blocks": 103,
+      "bestblockhash": "1ecb8567bfb6d96c3d029aca4ffc3321407354f0894f8980d7442215d4cd8513",
+      "verificationprogress": 1.0
+    },
+    "account_count": 5,
+    "auto_mine": true,
+    "network": "Regtest",
+    "endpoints": {
+      "dashboard": "http://127.0.0.1:64254",
+      "zakura_rpc": "http://127.0.0.1:18232",
+      "lightwalletd": "http://127.0.0.1:9067",
+      "p2p": "127.0.0.1:18233"
+    },
+    "wallet_sync": {
+      "state": "ready",
+      "fully_scanned_height": 103,
+      "fully_scanned_hash": "1ecb8567bfb6d96c3d029aca4ffc3321407354f0894f8980d7442215d4cd8513",
+      "observed_height": 103,
+      "observed_hash": "1ecb8567bfb6d96c3d029aca4ffc3321407354f0894f8980d7442215d4cd8513",
+      "last_success_at": 1792070764,
+      "error": null
+    },
+    "node_height": 103,
+    "lightwalletd_height": 103,
+    "wallet_scanned_height": 103,
+    "wallet_sync_state": "ready",
+    "settled": true,
+    "settlement_blocker": null
+  },
+  "mining/jobs": {
+    "job": null
+  },
+  "accounts": [
+    {
+      "id": 1,
+      "name": "Account 1",
+      "unified_address": "uregtest1zkuzfv5m3yhv2j4fmvq5rjurkxenxyq8r7h4daun2zkznrjaa8ra8asgdm8wwgwjvlwwrxx7347r8w0ee6dqyw4rufw4wg9djwcr6frzkezmdw6dud3wsm99eany5r8wgsctlxquu009nzd6hsme2tcsk0v3sgjvxa70er7h27z5epr67p5q767s2z5gt88paru56mxpm6pwz0cu35m",
+      "transparent_address": "tmBsTi2xWTjUdEXnuTceL7fecEQKeWaPDJd",
+      "unified_full_viewing_key": "uviewregtest1xtw78u9kj2clxyjmqnzga8vexdk4n6gsepg7zqmma36je9urks07fqhcspuhns9k43swwglj6qjx2j32wzq75969atku20vfv2vl3tjqgjhc3wzd6dc8njx4x64ay48w6av5cwt44lt6zaw2682xldvpz72dfs7mweezduqed6ayjkhmutjgh0y924myz4se78zdjflmejus027n9wjhlxg57suyjrn7tahusuvyqjz00a2dza6uhx39zkhe03rad6c8zad5e2seryndl2775lmvh8yy4cmlarmupmq567l4308jdl0hxzus0d5t9ajvgx85degat7p6wj90c9dwwqyvdcauy9wh9xz55qpjefhpjrlhsvlsz853lczgfhl8tcynr0ltrjepzs99rxhld7mrv6pe37lk4c6pjtwrmtmmfktjmx99sztp7j2kwcfvncpxkrytveskrxcjgd8s8gphtfvhgd8wxf5vk0lcwswvu30cn5t7rf09",
+      "transparent_zatoshi": 0,
+      "ironwood_zatoshi": 500000000
+    },
+    {
+      "id": 2,
+      "name": "Account 2",
+      "unified_address": "uregtest1fglg8gvt5luptyqvrx0u52yam4cru63skg9s0sa6zth72hachgyhwm8e7p9vy2vcatws7wvzfhnrqte4nwrff7tju4dv35gdn4h8ekarqyeqlk5gpmm5zlphzls960xe20cajd0k4vcvm2j8sekz77f864sgedncru8u8ruz8gvnpuxvnk7qcyszj7jg5n7nqqqfswh736c2kt4s7ad",
+      "transparent_address": "tmF3CKFqQ68GdisHK3D9S8pMty7a7Fr2wiN",
+      "unified_full_viewing_key": "uviewregtest1qmeggs97wueguk7enycdeucdhygeyum87j6qekawrx2hhrkcmx7yvk7gtam698ttmrc7c8ydzzjm54d6wkdw8cdfqgnr909e235k9fykfknxe6a83ujxju9ejfcl3l37agj7nzl23sen3pg0jpmuh4p7sdl59nt336ms92azckjm5s0en0upl297gvlca75pwxg4h3eq7gn3w40zzu9mlc2p3988jgmkelyxcf9u0rhrjgm7zu3au64ptex5a4q0lzcg3289mwknqz4uel04qtv8gsdzrw7q5gmu4s3z47ypw3x93jpsa6rh6mjxaetrz04ye6zv7llkdr2cfe9n0kzdhx3xpvdgyp64swaax037uhshkapu89as574srpjhsjaxdwkvp6y7zxpd6ck8zuvha4akuq2cv9krx8cs4tm94fntqlej3k3f7pusvjutv5z9ghskqyn4r795vv04se5yhxnwkt23k0mcc33dhmzz7vw39svd2kcc",
+      "transparent_zatoshi": 0,
+      "ironwood_zatoshi": 0
+    },
+    {
+      "id": 3,
+      "name": "Account 3",
+      "unified_address": "uregtest1m3cll7nlzq6dyrgpfvw22xcrvkq4x4y79q6wekj9t24dh6khunpu0gw7u80tlz047gwmr54qvhllq4ad4vm5qrxjlr997l3egt4scs3fg578stzue3u68rte0y76gy43kmvgvaj0jcmkewpa86w9ml2ph2wg9cd2mnwr272y8eggtvhsrxeeykx04hksanha3qmvhrf0v2c52fxyaue",
+      "transparent_address": "tmRmiMusmfipcUmWeQ4YUVc6rKtckdd2aV3",
+      "unified_full_viewing_key": "uviewregtest1ylvkth8qkw8u4v6z25n5c9qyc89z7wnm3fel29ssttfflcty5tk7r6whgemxdfzlwr2xremum99v4urt6zapc4qlhljsewfxa6hsx0tu256fgxaea4rllj8yrqv49s3nvappv6zcv8mer4dlnkxg8qvmt85ws4lv7hs30grhzqrklxg25etzxq53qmgh6lw3a74tp4hd75qtjmrj9xlz7cscephehn2a0g5dt7ulwc5ugkz8l74yqxlzch94ed6rvh005gazsyz8vt833t4w5h83cuz3wfgvqtk3fqhl4cwtz4ukyg5vh3xfrxuqljhh7mkmzjtzqndf7sg4v7e4hvqsdjjhqdxf8295xdx74z2e6enwq37uux7ye3qtgdttakq33kekqmwmsaawx9wqtfvekfdv4ze52ryl4emerzqzsh7ma7xjtg5h8gfugdpyv9zxkjgzhlgjg0hjpvtyfw7ns3uuj58vd0fqdmp0xr9t6yf7kuwy6a5n",
+      "transparent_zatoshi": 0,
+      "ironwood_zatoshi": 0
+    },
+    {
+      "id": 4,
+      "name": "Account 4",
+      "unified_address": "uregtest1549x97unhklahphm9rzvf9dl6fm8nnpw8upggjnet7090sf994wm8crdnv8ul4h4jwy07hdt9ns59307um2gqzzpfssphtwjj4053ykgc4w2kczq4u9gxg9t08eg8d7gj90wp84v34wyurfhvu4zpmrkl9le2m04jcletuwvwa52a9fj90v3wulh32yhldr84uwr4j47z3w55w2899r",
+      "transparent_address": "tmDGByq79K3SJdCt3aGCTjYquv45Nf3ExaL",
+      "unified_full_viewing_key": "uviewregtest1g59zqflyregatngn40t9kxtyjg4m5yvywf83la9exyg5lr4wdh78ny02e6htzjrfcdft3lk25gfsjsn60vymq8mwq3n63wmw6papmkw5k8kqt3ptep6xzsv0pyqfargtrayjsgzcwcmm474gmasq6jcx0gw5vvl6pl3sd5t0uxjy6w3ldvq3f0swg7l9qrjrm3w03vdjplxu39p3fdf4g2zy3hntj8k4pxpvfy48szzznacpkes5p20a6pqyghfthtp5slvyknk70u4eacs3uz8jd34mr82gdlxsen8xygy9wyj6jytkenyyv9jjaq2xsrxqyzc88ee7wkx224uuvq5xcpkltreerp6lpg8ul5ehjwe42h6yc4fajj5m8l7tar490fc4r6wdq6nzhuvequ6mesj9m6z3j9hrmynuv5grrn4wd8rwvydq48qdcyn2g6r9h4t7wzfz0q8wlnnq55qpdy62tv22l33qu3u8fjwan65adyhec4r2",
+      "transparent_zatoshi": 0,
+      "ironwood_zatoshi": 0
+    },
+    {
+      "id": 5,
+      "name": "Account 5",
+      "unified_address": "uregtest1l82ktar6wygqsncxp7famz8manh48tv283pve29fnumsrskyj9dyhn50l9gntm9k524cjq5xxm0zr7qwsspcmtrm5jlc7tqww60p9uvd8dke3sah86yzkj4rakhkpp0um6n08dxg50jv4pxnf3stenmyeyzqm0746g87sjh6kd328d0jetnwgktkuhjsfnhca5s9stselz02q52zvcj",
+      "transparent_address": "tmAsyD1UHXiomo6na1z7b1UtMSpFJArgPv9",
+      "unified_full_viewing_key": "uviewregtest1vgmanggk4mxu3zuvc3r6jxkl0jq2y5d6flgazvklu830vqqsfxlyelsuuan4hpessrr2us7ccn4t8vxpz7qt0p3nh774r58c73vr50r4ag6lf963auuj2t4v8prfcf0haz44m03rtnsjk3cf9nwsyl74yqnk3gzqqhwuy7kvn3cz4ztjzzjrnvw3an6xlgc7yp3fpu29gmp7wu6s7t6y79dwmke3t89dy0g8ervd2j4tqac773lerye3xjj33t0xahr7tm55v5pvnghjwrwrf6088fpny49f2wvxg770lnn99zacguym44zdd6lnveg59targetdj6e0pz9wwjqchv6yttg6y7epa7j5egkmdyr7uvvcglygc2xaceltu5s20r2f6363dx6xhm0evqzw7aph2v0wfnwwghsg2032s0ufqxlqta5g7d9st4xguudt24xuh3qdzm33pwna6m8evc47z8zmh754hv3fdp28jr4hw4ugcq9acemg",
+      "transparent_zatoshi": 0,
+      "ironwood_zatoshi": 0
+    }
+  ],
+  "browser_post_requests": []
+}

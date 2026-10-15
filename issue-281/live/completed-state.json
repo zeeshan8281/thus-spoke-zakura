@@ -1,0 +1,60 @@
+{
+  "status": {
+    "instance": "zakura-verify-281",
+    "node": {
+      "chain": "test",
+      "blocks": 105,
+      "bestblockhash": "219613db05906a9da07561f3588eac92de2d00ef6cba35ed767855868c3b2d03",
+      "verificationprogress": 1.0
+    },
+    "account_count": 5,
+    "auto_mine": true,
+    "network": "Regtest",
+    "endpoints": {
+      "dashboard": "http://127.0.0.1:64254",
+      "zakura_rpc": "http://127.0.0.1:18232",
+      "lightwalletd": "http://127.0.0.1:9067",
+      "p2p": "127.0.0.1:18233"
+    },
+    "wallet_sync": {
+      "state": "ready",
+      "fully_scanned_height": 105,
+      "fully_scanned_hash": "219613db05906a9da07561f3588eac92de2d00ef6cba35ed767855868c3b2d03",
+      "observed_height": 105,
+      "observed_hash": "219613db05906a9da07561f3588eac92de2d00ef6cba35ed767855868c3b2d03",
+      "last_success_at": 1792070863,
+      "error": null
+    },
+    "node_height": 105,
+    "lightwalletd_height": 105,
+    "wallet_scanned_height": 105,
+    "wallet_sync_state": "ready",
+    "settled": true,
+    "settlement_blocker": null
+  },
+  "job": {
+    "completed_blocks": 2,
+    "error": null,
+    "id": "f8d0489e-e90d-4fb2-9b97-fa0c7b423ace",
+    "progress_uncertain": false,
+    "requested_blocks": 2,
+    "state": "completed"
+  },
+  "job_lookup": {
+    "id": "f8d0489e-e90d-4fb2-9b97-fa0c7b423ace",
+    "requested_blocks": 2,
+    "completed_blocks": 2,
+    "state": "completed",
+    "error": null,
+    "progress_uncertain": false
+  },
+  "browser_posts": [
+    {
+      "time": "2026-10-15T13:27:43.008Z",
+      "method": "POST",
+      "path": "/api/v1/mining/jobs",
+      "status": 202,
+      "body": "{\"id\":\"f8d0489e-e90d-4fb2-9b97-fa0c7b423ace\",\"requested_blocks\":2,\"completed_blocks\":0,\"state\":\"mining\",\"error\":null,\"progress_uncertain\":false}"
+    }
+  ]
+}

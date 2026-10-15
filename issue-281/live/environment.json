@@ -1,0 +1,10 @@
+{
+  "frontend_commit": "127dc3b6c37953dfd036832aa71a8995b0d1c708",
+  "backend_image": "zakura-assigned-validation:local (existing validated build, includes PR #341 timestamp fix)",
+  "backend_image_id": "sha256:e14555ce265b1e74d98a3f777e351982745aaf371a79135c1a76bb5bcb5e9a3a",
+  "zakura": "zakuracore/zakura:1.6.0",
+  "lightwalletd": "ghcr.io/zcashlabs/thus-spoke-zakura-lightwalletd:0.3.0",
+  "frontend_source": "PR #345 production web build mounted read-only over the image dashboard",
+  "storage_denial": "Browser sandbox iframe without allow-same-origin; no JavaScript storage mocks",
+  "api": "All API requests and SSE forwarded to the actual server. Loopback proxy supplies CORS headers for the sandbox opaque origin."
+}
