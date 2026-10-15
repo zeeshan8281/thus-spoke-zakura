@@ -1,0 +1,32 @@
+[
+  {
+    "id": "5aeb118d-aaff-40df-8feb-329996cda368",
+    "kind": "send",
+    "from_account": 1,
+    "to_account": 2,
+    "to_address": null,
+    "source_pool": "ironwood",
+    "destination_pool": "ironwood",
+    "amount_zatoshi": 25000000,
+    "txid": "d8a12c9b6cf99031fafde54d54b302e94915aed551c3bae75113bde8e99a2ffb",
+    "block_hash": "3732fd8a1a9faeb70e5339480397b516b622c5bbec786ba546a7a3829c1cb917",
+    "status": "confirmed",
+    "created_at": "2026-10-15 10:58:37",
+    "last_error": null
+  },
+  {
+    "id": "18758151-858d-487c-8962-ec74c045afbd",
+    "kind": "send",
+    "from_account": 1,
+    "to_account": 4,
+    "to_address": null,
+    "source_pool": "ironwood",
+    "destination_pool": "ironwood",
+    "amount_zatoshi": 2000000,
+    "txid": "d90c91a9fada649c617264e3e31ece2883f69acf0b5b75085c8c149091fcef41",
+    "block_hash": "cf38b550aa9b813f54caf65d66b6b1e1c7c855c670517acd1f240e7a5370606e",
+    "status": "confirmed",
+    "created_at": "2026-10-15 10:57:59",
+    "last_error": null
+  }
+]
