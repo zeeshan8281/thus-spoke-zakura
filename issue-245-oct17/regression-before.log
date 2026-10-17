@@ -1,0 +1,44 @@
+
+> thus-spoke-zakura-web@0.1.0 test
+> vitest run src/features/wallet/SendDialog.test.tsx -t does not submit or retain a payment|preserves tracking and recovery after closing
+
+
+ RUN  v5.0.1 /Users/zeeshan/zakura-fix-275/web
+
+ ❯ src/features/wallet/SendDialog.test.tsx (76 tests | 4 failed | 70 skipped) 2730ms
+   ❯ SendDialog (76)
+     × does not submit or retain a payment when the quoting form is closed (quote resolved) 572ms
+     × does not submit or retain a payment when the quoting form is closed (quote rejected) 222ms
+     × does not submit or retain a payment when the quoting form is replaced (quote resolved) 348ms
+     × does not submit or retain a payment when the quoting form is replaced (quote rejected) 396ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/wallet/SendDialog.test.tsx > SendDialog > does not submit or retain a payment when the quoting form is closed (quote resolved)
+ FAIL  src/features/wallet/SendDialog.test.tsx > SendDialog > does not submit or retain a payment when the quoting form is closed (quote rejected)
+ FAIL  src/features/wallet/SendDialog.test.tsx > SendDialog > does not submit or retain a payment when the quoting form is replaced (quote resolved)
+ FAIL  src/features/wallet/SendDialog.test.tsx > SendDialog > does not submit or retain a payment when the quoting form is replaced (quote rejected)
+AssertionError: expected [ [ '/api/v1/send', …(1) ] ] to have a length of +0 but got 1
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ src/features/wallet/SendDialog.test.tsx:1430:36
+    1428|         await quoting.catch(() => undefined); // The query hook owns t…
+    1429|       });
+    1430|       expect(sendCalls(fetchMock)).toHaveLength(0);
+       |                                    ^
+    1431|       expect({ ...localStorage }).toEqual(localBefore);
+    1432|       expect({ ...sessionStorage }).toEqual(sessionBefore);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 2 passed | 70 skipped (76)
+   Start at  22:26:11
+   Duration  5.29s (tests 54%, environment 19%, transform 12%, import 12%, setup 3%)
+

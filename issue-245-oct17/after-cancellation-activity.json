@@ -1,0 +1,32 @@
+[
+  {
+    "id": "cf7bebe1-462f-41eb-a0a2-b14f4e7e0814",
+    "kind": "send",
+    "from_account": 1,
+    "to_account": 2,
+    "to_address": null,
+    "source_pool": "ironwood",
+    "destination_pool": "ironwood",
+    "amount_zatoshi": 1000000,
+    "txid": "088a0fb2092e5dcf13aa876a4a81fd40b30f9bfa829803472abcb83aaa31df61",
+    "block_hash": "f0bfd5331d0021d2e7412dd5eac85e49abb3092c1c46e52f733da58f5a7b9d79",
+    "status": "confirmed",
+    "created_at": "2026-10-17 16:58:21",
+    "last_error": null
+  },
+  {
+    "id": "dec6a6ee-d98f-454d-86fe-0bad833d79bf",
+    "kind": "faucet",
+    "from_account": null,
+    "to_account": 1,
+    "to_address": null,
+    "source_pool": "ironwood",
+    "destination_pool": "ironwood",
+    "amount_zatoshi": 500000000,
+    "txid": "af91ee554d625cf382e2c857beec7ee43927d4a3971d830cce497c0bdc0793ae",
+    "block_hash": "94e609aa7f987e7f571c155dd133fa0b14a403b4f4b941eb48d00e714a1850f0",
+    "status": "confirmed",
+    "created_at": "2026-10-17 16:57:49",
+    "last_error": null
+  }
+]

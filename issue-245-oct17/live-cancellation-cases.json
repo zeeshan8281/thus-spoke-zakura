@@ -1,0 +1,62 @@
+[
+  {
+    "outcome": "resolved",
+    "reopenedAccount3": false,
+    "checkingFeeVisible": true,
+    "start": "2026-10-17T17:00:05.600Z",
+    "quoteOutcome": {
+      "at": "2026-10-17T17:00:06.735Z",
+      "event": "delivered",
+      "method": "POST",
+      "path": "/api/v1/send/quote",
+      "status": 200,
+      "request": "{\"from_account\":1,\"source_pool\":\"ironwood\",\"destination_pool\":\"ironwood\"}",
+      "response": "{\"available_zatoshi\":498990000,\"fee_zatoshi\":10000,\"max_zatoshi\":498980000}"
+    }
+  },
+  {
+    "outcome": "resolved",
+    "reopenedAccount3": true,
+    "checkingFeeVisible": true,
+    "start": "2026-10-17T17:00:06.948Z",
+    "quoteOutcome": {
+      "at": "2026-10-17T17:00:08.300Z",
+      "event": "delivered",
+      "method": "POST",
+      "path": "/api/v1/send/quote",
+      "status": 200,
+      "request": "{\"from_account\":1,\"source_pool\":\"ironwood\",\"destination_pool\":\"ironwood\"}",
+      "response": "{\"available_zatoshi\":498990000,\"fee_zatoshi\":10000,\"max_zatoshi\":498980000}"
+    }
+  },
+  {
+    "outcome": "dropped",
+    "reopenedAccount3": false,
+    "checkingFeeVisible": true,
+    "start": "2026-10-17T17:00:08.427Z",
+    "quoteOutcome": {
+      "at": "2026-10-17T17:00:09.479Z",
+      "event": "dropped",
+      "method": "POST",
+      "path": "/api/v1/send/quote",
+      "status": 200,
+      "request": "{\"from_account\":1,\"source_pool\":\"ironwood\",\"destination_pool\":\"ironwood\"}",
+      "response": "{\"available_zatoshi\":498990000,\"fee_zatoshi\":10000,\"max_zatoshi\":498980000}"
+    }
+  },
+  {
+    "outcome": "dropped",
+    "reopenedAccount3": true,
+    "checkingFeeVisible": true,
+    "start": "2026-10-17T17:00:09.652Z",
+    "quoteOutcome": {
+      "at": "2026-10-17T17:00:11.020Z",
+      "event": "dropped",
+      "method": "POST",
+      "path": "/api/v1/send/quote",
+      "status": 200,
+      "request": "{\"from_account\":1,\"source_pool\":\"ironwood\",\"destination_pool\":\"ironwood\"}",
+      "response": "{\"available_zatoshi\":498990000,\"fee_zatoshi\":10000,\"max_zatoshi\":498980000}"
+    }
+  }
+]
