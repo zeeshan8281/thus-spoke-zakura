@@ -1,0 +1,791 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load remote build context
+#1 DONE 0.5s
+
+#1 [internal] load remote build context
+#1 DONE 0.5s
+
+#2 copy /context /
+#2 DONE 0.2s
+
+#3 [internal] load metadata for docker.io/library/rust:1.98-bookworm
+#3 DONE 1.4s
+
+#4 [rust 1/5] FROM docker.io/library/rust:1.98-bookworm@sha256:93ce27a88655056a51dbdd8f5f2d7ddc071c7b0070fb288a37b5a285fc83971e
+#4 resolve docker.io/library/rust:1.98-bookworm@sha256:93ce27a88655056a51dbdd8f5f2d7ddc071c7b0070fb288a37b5a285fc83971e 0.0s done
+#4 DONE 0.0s
+
+#5 [rust 2/5] WORKDIR /src
+#5 CACHED
+
+#6 [rust 3/5] COPY Cargo.toml Cargo.lock* rust-toolchain.toml ./
+#6 CACHED
+
+#7 [rust 3/9] COPY Cargo.toml Cargo.lock* rust-toolchain.toml ./
+#7 CACHED
+
+#8 [rust 4/9] COPY crates/ crates/
+#8 DONE 0.1s
+
+#9 [rust 5/9] RUN --mount=type=cache,target=/usr/local/cargo/registry     --mount=type=cache,target=/usr/local/cargo/git     --mount=type=cache,target=/src/target     cargo build --profile "dev" --locked -p ths-server &&     if [ "dev" = dev ]; then target_dir=debug; else target_dir="dev"; fi &&     cp "/src/target/$target_dir/ths-server" /tmp/ths-server
+#9 1.282 info: syncing channel updates for 1.98.0-aarch64-unknown-linux-gnu
+#9 1.755 info: latest update on 2026-08-20 for version 1.98.0 (88d9e12ae 2026-08-18)
+#9 1.756 info: downloading 5 components
+#9 24.46 warn: the missing active toolchain `1.98.0-aarch64-unknown-linux-gnu` has been auto-installed
+#9 24.46 warn: this might cause rustup commands to take longer time to finish than expected
+#9 24.46 info: you may opt out with `RUSTUP_AUTO_INSTALL=0` or `rustup set auto-install disable`
+#9 25.95     Blocking waiting for file lock on build directory
+#9 37.56     Finished `dev` profile [unoptimized + debuginfo] target(s) in 12.91s
+#9 DONE 45.1s
+
+#10 [rust 6/9] COPY . .
+#10 DONE 5.5s
+
+#11 [rust 7/9] RUN --mount=type=cache,target=/usr/local/cargo/registry --mount=type=cache,target=/usr/local/cargo/git --mount=type=cache,target=/src/target cargo clippy --workspace --all-targets --all-features -- -D warnings
+#11 1.377     Updating crates.io index
+#11 11.48  Downloading crates ...
+#11 11.58   Downloaded addchain v0.3.0
+#11 11.59   Downloaded heck v0.5.0
+#11 11.59   Downloaded http-body v1.1.0
+#11 11.59   Downloaded httpdate v1.0.3
+#11 11.61   Downloaded idna_adapter v1.2.2
+#11 11.63   Downloaded http-range-header v0.4.2
+#11 11.63   Downloaded ident_case v1.0.1
+#11 11.63   Downloaded hex v0.4.3
+#11 11.63   Downloaded is_terminal_polyfill v1.70.2
+#11 11.63   Downloaded yoke-derive v0.8.2
+#11 11.64   Downloaded inout v0.1.4
+#11 11.64   Downloaded itoa v1.0.18
+#11 11.64   Downloaded lru-slab v0.1.2
+#11 11.64   Downloaded maybe-rayon v0.1.1
+#11 11.67   Downloaded num-conv v0.2.2
+#11 11.67   Downloaded option-ext v0.2.0
+#11 11.67   Downloaded powerfmt v0.2.0
+#11 11.67   Downloaded potential_utf v0.1.6
+#11 11.68   Downloaded visibility v0.1.1
+#11 11.69   Downloaded multimap v0.10.1
+#11 11.69   Downloaded rand_core v0.6.4
+#11 11.70   Downloaded matchers v0.2.0
+#11 11.71   Downloaded opaque-debug v0.3.1
+#11 11.71   Downloaded memuse v0.2.2
+#11 11.71   Downloaded rand_chacha v0.3.1
+#11 11.72   Downloaded radium v0.7.0
+#11 11.73   Downloaded quick-error v1.2.3
+#11 11.73   Downloaded version_check v0.9.5
+#11 11.74   Downloaded http-body-util v0.1.5
+#11 11.74   Downloaded hyper-rustls v0.27.9
+#11 11.74   Downloaded hyper-timeout v0.5.2
+#11 11.74   Downloaded hybrid-array v0.2.3
+#11 11.75   Downloaded lazy_static v1.5.0
+#11 11.75   Downloaded zakura-pairing v2.2.0
+#11 11.75   Downloaded incrementalmerkletree-testing v0.3.0
+#11 11.75   Downloaded ipnet v2.12.2
+#11 11.75   Downloaded mime v0.3.17
+#11 11.76   Downloaded lock_api v0.4.14
+#11 11.76   Downloaded nanorand v0.7.0
+#11 11.76   Downloaded num-integer v0.1.47
+#11 11.76   Downloaded ppv-lite86 v0.2.21
+#11 11.77   Downloaded zakura-pir-enhance-types v0.0.1-rc0
+#11 11.78   Downloaded incrementalmerkletree v0.8.2
+#11 11.80   Downloaded percent-encoding v2.3.2
+#11 11.80   Downloaded nu-ansi-term v0.50.3
+#11 11.81   Downloaded mime_guess v2.0.5
+#11 11.81   Downloaded nonempty v0.11.0
+#11 11.81   Downloaded zeroize_derive v1.5.0
+#11 11.81   Downloaded quote v1.0.47
+#11 11.82   Downloaded pkg-config v0.3.34
+#11 11.82   Downloaded pin-project-lite v0.2.17
+#11 11.82   Downloaded aead v0.5.2
+#11 11.83   Downloaded poly1305 v0.8.0
+#11 11.84   Downloaded time-core v0.1.9
+#11 11.85   Downloaded hex-conservative v0.2.3
+#11 11.85   Downloaded tonic-build v0.14.6
+#11 11.94   Downloaded hmac v0.13.0-pre.4
+#11 11.94   Downloaded httparse v1.10.1
+#11 11.95   Downloaded litemap v0.8.3
+#11 11.95   Downloaded litrs v1.0.0
+#11 11.95   Downloaded matchit v0.8.4
+#11 11.96   Downloaded parking_lot v0.12.5
+#11 11.96   Downloaded zcash_spec v0.2.1
+#11 11.96   Downloaded prost-derive v0.14.4
+#11 11.96   Downloaded quinn-udp v0.5.15
+#11 11.98   Downloaded slab v0.4.12
+#11 11.98   Downloaded zcash_encoding v0.4.0
+#11 11.98   Downloaded smallvec v1.16.0
+#11 11.99   Downloaded tower-layer v0.3.3
+#11 11.99   Downloaded tower-service v0.3.3
+#11 11.99   Downloaded wagyu-zcash-parameters v0.2.0
+#11 12.01   Downloaded parking_lot_core v0.9.12
+#11 12.02   Downloaded pin-project-internal v1.1.13
+#11 12.02   Downloaded zerofrom v0.1.8
+#11 12.02   Downloaded zerofrom-derive v0.1.7
+#11 12.02   Downloaded once_cell v1.21.4
+#11 12.02   Downloaded postcard v1.1.3
+#11 12.03   Downloaded assert_matches v1.5.0
+#11 12.03   Downloaded darling_macro v0.24.1
+#11 12.03   Downloaded prost v0.14.4
+#11 12.03   Downloaded synstructure v0.13.2
+#11 12.03   Downloaded want v0.3.1
+#11 12.03   Downloaded crypto-common v0.2.0-rc.1
+#11 12.03   Downloaded icu_provider v2.3.1
+#11 12.04   Downloaded anstyle-query v1.1.5
+#11 12.04   Downloaded async-stream v0.3.6
+#11 12.04   Downloaded atomic-waker v1.1.2
+#11 12.05   Downloaded indexmap v1.9.3
+#11 12.05   Downloaded pin-project v1.1.13
+#11 12.06   Downloaded proc-macro2 v1.0.107
+#11 12.06   Downloaded block-buffer v0.11.0-rc.3
+#11 12.06   Downloaded errno v0.3.14
+#11 12.07   Downloaded bounded-vec v0.9.0
+#11 12.07   Downloaded form_urlencoded v1.2.2
+#11 12.07   Downloaded funty v2.0.0
+#11 12.07   Downloaded generic-array v0.14.7
+#11 12.07   Downloaded rand_pcg v0.10.2
+#11 12.09   Downloaded log v0.4.34
+#11 12.10   Downloaded cfg-if v1.0.4
+#11 12.10   Downloaded cfg_aliases v0.2.2
+#11 12.10   Downloaded num-traits v0.2.19
+#11 12.11   Downloaded prost-build v0.14.4
+#11 12.11   Downloaded prost-types v0.14.4
+#11 12.11   Downloaded block-buffer v0.10.4
+#11 12.11   Downloaded crossbeam-deque v0.8.8
+#11 12.11   Downloaded time-macros v0.2.32
+#11 12.12   Downloaded icu_locale_core v2.3.0
+#11 12.12   Downloaded icu_normalizer_data v2.3.0
+#11 12.13   Downloaded prettyplease v0.2.37
+#11 12.13   Downloaded deranged v0.5.8
+#11 12.13   Downloaded directories v6.0.0
+#11 12.13   Downloaded icu_collections v2.3.0
+#11 12.14   Downloaded fallible-iterator v0.3.0
+#11 12.14   Downloaded either v1.18.0
+#11 12.14   Downloaded rand_core v0.10.1
+#11 12.14   Downloaded group v0.14.0
+#11 12.14   Downloaded scopeguard v1.2.0
+#11 12.14   Downloaded tokio-macros v2.7.2
+#11 12.15   Downloaded clap_lex v1.1.0
+#11 12.16   Downloaded ripemd v0.2.0-pre.4
+#11 12.18   Downloaded rusty-fork v0.3.1
+#11 12.20   Downloaded utf8_iter v1.0.4
+#11 12.20   Downloaded base16ct v0.2.0
+#11 12.20   Downloaded const-crc32-nostd v1.3.1
+#11 12.20   Downloaded tonic-prost v0.14.6
+#11 12.21   Downloaded utf8parse v0.2.2
+#11 12.22   Downloaded colorchoice v1.0.5
+#11 12.22   Downloaded http v1.5.0
+#11 12.23   Downloaded cobs v0.3.0
+#11 12.23   Downloaded signal-hook-registry v1.4.8
+#11 12.23   Downloaded tinystr v0.8.4
+#11 12.24   Downloaded serde_path_to_error v0.1.20
+#11 12.24   Downloaded embedded-io v0.6.1
+#11 12.24   Downloaded schemerz-rusqlite v0.370.0
+#11 12.24   Downloaded rustc_version v0.4.1
+#11 12.24   Downloaded sync_wrapper v1.0.2
+#11 12.25   Downloaded bit-set v0.8.0
+#11 12.25   Downloaded quinn v0.11.11
+#11 12.27   Downloaded rand v0.8.8
+#11 12.28   Downloaded num-bigint v0.4.8
+#11 12.28   Downloaded unicase v2.9.0
+#11 12.29   Downloaded unarray v0.1.4
+#11 12.29   Downloaded defmt-macros v1.1.1
+#11 12.29   Downloaded embedded-io v0.4.0
+#11 12.30   Downloaded shardtree v0.7.1
+#11 12.30   Downloaded unicode-ident v1.0.24
+#11 12.30   Downloaded document-features v0.2.12
+#11 12.30   Downloaded fallible-streaming-iterator v0.1.9
+#11 12.30   Downloaded semver v1.0.28
+#11 12.31   Downloaded static_assertions v1.1.0
+#11 12.31   Downloaded find-msvc-tools v0.1.12
+#11 12.31   Downloaded fixedbitset v0.5.7
+#11 12.31   Downloaded hash32 v0.2.1
+#11 12.32   Downloaded futures-macro v0.3.34
+#11 12.33   Downloaded memchr v2.8.3
+#11 12.33   Downloaded minimal-lexical v0.2.1
+#11 12.33   Downloaded thiserror-impl v2.0.20
+#11 12.34   Downloaded rustc-hash v2.1.3
+#11 12.34   Downloaded stable_deref_trait v1.2.1
+#11 12.34   Downloaded icu_properties v2.3.0
+#11 12.35   Downloaded shlex v2.0.1
+#11 12.36   Downloaded tap v1.0.1
+#11 12.36   Downloaded crossbeam-epoch v0.9.21
+#11 12.36   Downloaded defmt v1.1.1
+#11 12.36   Downloaded wyz v0.5.1
+#11 12.37   Downloaded cpufeatures v0.2.17
+#11 12.42   Downloaded derive-getters v0.5.0
+#11 12.55   Downloaded fnv v1.0.7
+#11 12.57   Downloaded rand_distr v0.6.0
+#11 12.57   Downloaded url v2.5.8
+#11 12.58   Downloaded sha1 v0.10.7
+#11 12.58   Downloaded zcash_note_encryption v0.4.2
+#11 12.58   Downloaded zeroize v1.9.0
+#11 12.58   Downloaded zip32 v0.2.1
+#11 12.59   Downloaded equivalent v1.0.2
+#11 12.59   Downloaded fastrand v2.5.0
+#11 12.59   Downloaded futures-core v0.3.34
+#11 12.59   Downloaded futures-io v0.3.34
+#11 12.59   Downloaded getrandom v0.2.17
+#11 12.59   Downloaded hyper-util v0.1.20
+#11 12.60   Downloaded indexmap v2.14.2
+#11 12.61   Downloaded itertools v0.10.5
+#11 12.62   Downloaded mio v1.2.3
+#11 12.62   Downloaded nom v7.1.3
+#11 12.63   Downloaded rand v0.10.2
+#11 12.64   Downloaded rand_xorshift v0.3.0
+#11 12.65   Downloaded ripemd v0.1.3
+#11 12.65   Downloaded subtle v2.6.1
+#11 12.65   Downloaded tonic-prost-build v0.14.6
+#11 12.65   Downloaded tracing-log v0.2.0
+#11 12.65   Downloaded try-lock v0.2.5
+#11 12.66   Downloaded writeable v0.6.4
+#11 12.66   Downloaded zakura-zip321 v2.2.0
+#11 12.67   Downloaded zmij v1.0.23
+#11 12.67   Downloaded defmt-parser v1.0.0
+#11 12.67   Downloaded secrecy v0.8.0
+#11 12.67   Downloaded zerovec-derive v0.11.6
+#11 12.67   Downloaded async-stream-impl v0.3.6
+#11 12.67   Downloaded sharded-slab v0.1.7
+#11 12.68   Downloaded idna v1.1.0
+#11 12.68   Downloaded thiserror-impl v1.0.69
+#11 12.69   Downloaded thread_local v1.1.10
+#11 12.69   Downloaded tracing-attributes v0.1.31
+#11 12.69   Downloaded universal-hash v0.5.1
+#11 12.69   Downloaded dirs-sys v0.5.0
+#11 12.69   Downloaded futures-sink v0.3.34
+#11 12.69   Downloaded flume v0.11.1
+#11 12.70   Downloaded getrandom v0.4.3
+#11 12.70   Downloaded heapless v0.7.17
+#11 12.70   Downloaded digest v0.10.7
+#11 12.70   Downloaded foldhash v0.1.5
+#11 12.71   Downloaded anstyle v1.0.14
+#11 12.71   Downloaded jiff-core v0.1.0
+#11 12.71   Downloaded anstream v1.0.0
+#11 12.72   Downloaded anstyle-parse v1.0.0
+#11 12.72   Downloaded async-trait v0.1.92
+#11 12.73   Downloaded bitflags v1.3.2
+#11 12.73   Downloaded serdect v0.2.0
+#11 12.73   Downloaded bs58 v0.5.1
+#11 12.73   Downloaded getset v0.1.7
+#11 12.74   Downloaded byteorder v1.5.0
+#11 12.74   Downloaded cbc v0.1.2
+#11 12.74   Downloaded uuid v1.26.1
+#11 12.74   Downloaded tempfile v3.27.0
+#11 12.75   Downloaded schemerz v0.2.0
+#11 12.75   Downloaded frost-rerandomized v3.0.0
+#11 12.75   Downloaded untrusted v0.9.0
+#11 12.75   Downloaded ff_derive v0.14.0
+#11 12.75   Downloaded chacha20 v0.9.1
+#11 12.75   Downloaded cipher v0.4.4
+#11 12.75   Downloaded hashbrown v0.12.3
+#11 12.76   Downloaded autocfg v1.5.1
+#11 12.76   Downloaded axum-core v0.5.6
+#11 12.76   Downloaded constant_time_eq v0.4.2
+#11 12.76   Downloaded corez v0.1.1
+#11 12.76   Downloaded itertools v0.14.0
+#11 12.77   Downloaded ryu v1.0.23
+#11 12.77   Downloaded rustls-pki-types v1.15.1
+#11 12.77   Downloaded displaydoc v0.2.7
+#11 12.77   Downloaded tinyvec_macros v0.1.1
+#11 12.77   Downloaded yoke v0.8.3
+#11 12.78   Downloaded crypto-common v0.1.7
+#11 12.78   Downloaded serde_core v1.0.229
+#11 12.78   Downloaded hyper v1.11.1
+#11 12.78   Downloaded sha2 v0.11.0-pre.4
+#11 12.79   Downloaded strsim v0.11.1
+#11 12.79   Downloaded daggy v0.8.1
+#11 12.79   Downloaded bit-vec v0.8.0
+#11 12.79   Downloaded f4jumble v0.1.1
+#11 12.79   Downloaded fpe v0.6.1
+#11 12.80   Downloaded libm v0.2.16
+#11 12.81   Downloaded futures-task v0.3.34
+#11 12.81   Downloaded icu_properties_data v2.3.0
+#11 12.82   Downloaded spin v0.9.9
+#11 12.82   Downloaded ff v0.14.0
+#11 12.83   Downloaded wait-timeout v0.2.1
+#11 12.83   Downloaded tonic v0.14.6
+#11 12.83   Downloaded thiserror v1.0.69
+#11 12.84   Downloaded tower-http v0.6.11
+#11 12.84   Downloaded darling v0.24.1
+#11 12.85   Downloaded sha2 v0.10.9
+#11 12.85   Downloaded tinyvec v1.13.2
+#11 12.86   Downloaded tokio-stream v0.1.19
+#11 12.86   Downloaded tokio-rustls v0.26.5
+#11 12.87   Downloaded serde_urlencoded v0.7.1
+#11 12.87   Downloaded proptest v1.6.0
+#11 12.88   Downloaded socket2 v0.6.5
+#11 12.89   Downloaded thiserror v2.0.20
+#11 12.89   Downloaded zakura-halo2-legacy-pdqsort v2.2.0
+#11 12.89   Downloaded zakura-proofs v2.2.0
+#11 12.90   Downloaded zakura-jubjub v2.2.0
+#11 12.90   Downloaded unicode-normalization v0.1.25
+#11 12.91   Downloaded zakura-protocol v2.2.0
+#11 12.91   Downloaded serde_json v1.0.151
+#11 12.93   Downloaded darling_core v0.24.1
+#11 13.02   Downloaded frost-core v3.0.0
+#11 13.03   Downloaded secp256k1 v0.29.1
+#11 13.03   Downloaded zakura-redjubjub v2.2.0
+#11 13.04   Downloaded signal-hook v0.3.18
+#11 13.05   Downloaded ambassador v0.4.2
+#11 13.05   Downloaded arrayvec v0.7.8
+#11 13.06   Downloaded anyhow v1.0.104
+#11 13.06   Downloaded rustls-webpki v0.103.15
+#11 13.08   Downloaded chacha20 v0.10.2
+#11 13.09   Downloaded vcpkg v0.2.15
+#11 13.14   Downloaded tower v0.5.3
+#11 13.15   Downloaded clap_derive v4.6.4
+#11 13.15   Downloaded webpki-roots v1.0.9
+#11 13.16   Downloaded quinn-proto v0.11.17
+#11 13.17   Downloaded digest v0.11.0-pre.9
+#11 13.17   Downloaded hashlink v0.10.0
+#11 13.17   Downloaded reqwest v0.12.28
+#11 13.18   Downloaded rusqlite v0.37.0
+#11 13.18   Downloaded syn v1.0.109
+#11 13.19   Downloaded regex v1.13.1
+#11 13.20   Downloaded bip32 v0.6.0-pre.1
+#11 13.20   Downloaded tokio-util v0.7.19
+#11 13.20   Downloaded futures-channel v0.3.34
+#11 13.20   Downloaded crossbeam-utils v0.8.23
+#11 13.21   Downloaded hashbrown v0.15.5
+#11 13.22   Downloaded which v8.0.6
+#11 13.23   Downloaded time v0.3.55
+#11 13.25   Downloaded futures-util v0.3.34
+#11 13.26   Downloaded zakura-keys v2.2.0
+#11 13.26   Downloaded serde_with v3.23.0
+#11 13.27   Downloaded tracing-subscriber v0.3.23
+#11 13.28   Downloaded bitcoin_hashes v0.14.101
+#11 13.28   Downloaded bitflags v2.13.2
+#11 13.28   Downloaded blake2s_simd v1.0.5
+#11 13.30   Downloaded h2 v0.4.19
+#11 13.33   Downloaded serde_with_macros v3.23.0
+#11 13.35   Downloaded nix v0.31.3
+#11 13.36   Downloaded zakura-halo2-poseidon v2.2.0
+#11 13.37   Downloaded syn v3.0.5
+#11 13.41   Downloaded zakura-address v2.2.0
+#11 13.42   Downloaded zcash_script v0.4.5
+#11 13.57   Downloaded blake2b_simd v1.0.5
+#11 13.58   Downloaded clap v4.6.6
+#11 13.60   Downloaded tracing-core v0.1.36
+#11 13.62   Downloaded bech32 v0.11.1
+#11 13.62   Downloaded rustls v0.23.44
+#11 13.64   Downloaded zakura-bellman v2.2.0
+#11 13.64   Downloaded zakura-reddsa v2.2.0
+#11 13.69   Downloaded base64 v0.22.1
+#11 13.74   Downloaded regex-syntax v0.8.11
+#11 13.75   Downloaded zakura-transparent v2.2.0
+#11 13.75   Downloaded zerotrie v0.2.5
+#11 13.78   Downloaded bytes v1.12.1
+#11 13.80   Downloaded chacha20poly1305 v0.10.1
+#11 13.81   Downloaded icu_normalizer v2.3.0
+#11 13.81   Downloaded base64 v0.23.1
+#11 13.82   Downloaded rayon-core v1.13.0
+#11 13.85   Downloaded serde_derive v1.0.229
+#11 13.87   Downloaded zakura-pczt v0.1.0-rc4
+#11 13.89   Downloaded cc v1.4.5
+#11 13.90   Downloaded bip39 v2.2.2
+#11 13.91   Downloaded zakura-equihash v2.2.0
+#11 13.94   Downloaded serde v1.0.229
+#11 14.12   Downloaded jiff v0.2.35
+#11 14.14   Downloaded zerovec v0.11.8
+#11 14.15   Downloaded aes v0.8.4
+#11 14.19   Downloaded typenum v1.20.1
+#11 14.20   Downloaded zakura-sinsemilla v2.2.0
+#11 14.22   Downloaded petgraph v0.7.1
+#11 14.26   Downloaded regex-automata v0.4.18
+#11 14.28   Downloaded zakura-sapling-crypto v2.2.0
+#11 14.29   Downloaded petgraph v0.8.3
+#11 14.32   Downloaded libc v0.2.189
+#11 14.37   Downloaded hashbrown v0.17.1
+#11 14.40   Downloaded rayon v1.12.0
+#11 14.41   Downloaded axum v0.8.9
+#11 14.42   Downloaded clap_builder v4.6.6
+#11 14.47   Downloaded aho-corasick v1.1.5
+#11 14.68   Downloaded bitvec v1.1.1
+#11 14.73   Downloaded zakura-pasta-curves v2.2.0
+#11 14.74   Downloaded chrono v0.4.45
+#11 14.75   Downloaded zakura-primitives v2.2.0
+#11 14.84   Downloaded zerocopy v0.8.58
+#11 14.92   Downloaded syn v2.0.119
+#11 14.98   Downloaded zakura-halo2-gadgets v2.2.0
+#11 15.20   Downloaded zakura-halo2-proofs v2.2.0
+#11 15.22   Downloaded rustix v1.1.4
+#11 15.32   Downloaded tracing v0.1.44
+#11 15.38   Downloaded zakura-client-sqlite v0.1.0-rc7
+#11 15.39   Downloaded ring v0.17.14
+#11 15.45   Downloaded zakura-bls12-381 v2.2.0
+#11 15.46   Downloaded zakura-client-backend v0.1.0-rc7
+#11 15.72   Downloaded tokio v1.53.1
+#11 15.77   Downloaded zakura-orchard v2.2.0
+#11 16.33   Downloaded secp256k1-sys v0.10.1
+#11 17.28   Downloaded linux-raw-sys v0.12.1
+#11 17.57   Downloaded wagyu-zcash-parameters-1 v0.2.0
+#11 17.90   Downloaded wagyu-zcash-parameters-6 v0.2.0
+#11 19.07   Downloaded libsqlite3-sys v0.35.0
+#11 21.47   Downloaded wagyu-zcash-parameters-5 v0.2.0
+#11 21.50   Downloaded wagyu-zcash-parameters-4 v0.2.0
+#11 21.55   Downloaded wagyu-zcash-parameters-3 v0.2.0
+#11 21.57   Downloaded wagyu-zcash-parameters-2 v0.2.0
+#11 21.93    Compiling libc v0.2.189
+#11 21.93     Checking cfg-if v1.0.4
+#11 21.93     Checking once_cell v1.21.4
+#11 21.93     Checking rand_core v0.10.1
+#11 21.93     Checking subtle v2.6.1
+#11 21.94     Checking pin-project-lite v0.2.17
+#11 21.95     Checking typenum v1.20.1
+#11 21.95     Checking log v0.4.34
+#11 21.95     Checking zeroize v1.9.0
+#11 21.95     Checking serde_core v1.0.229
+#11 22.17     Checking fnv v1.0.7
+#11 22.20     Checking smallvec v1.16.0
+#11 22.26     Checking bitflags v2.13.2
+#11 22.32    Compiling rustix v1.1.4
+#11 22.34     Checking futures-core v0.3.34
+#11 22.34     Checking bytes v1.12.1
+#11 22.35     Checking scopeguard v1.2.0
+#11 22.36     Checking tracing-core v0.1.36
+#11 22.42     Checking lock_api v0.4.14
+#11 22.44     Checking itoa v1.0.18
+#11 22.45     Checking arrayvec v0.7.8
+#11 22.45     Checking equivalent v1.0.2
+#11 22.47     Checking hashbrown v0.17.1
+#11 22.48     Checking futures-sink v0.3.34
+#11 22.54     Checking linux-raw-sys v0.12.1
+#11 22.56     Checking either v1.18.0
+#11 22.65     Checking memuse v0.2.2
+#11 22.67     Checking constant_time_eq v0.4.2
+#11 22.78     Checking tracing v0.1.44
+#11 22.81     Checking fastrand v2.5.0
+#11 22.81     Checking zerofrom v0.1.8
+#11 22.82     Checking memchr v2.8.3
+#11 22.90     Checking http v1.5.0
+#11 22.93     Checking stable_deref_trait v1.2.1
+#11 23.00     Checking yoke v0.8.3
+#11 23.04     Checking percent-encoding v2.3.2
+#11 23.06     Checking slab v0.4.12
+#11 23.16     Checking tap v1.0.1
+#11 23.17     Checking radium v0.7.0
+#11 23.21     Checking generic-array v0.14.7
+#11 23.23     Checking blake2b_simd v1.0.5
+#11 23.24     Checking indexmap v2.14.2
+#11 23.24     Checking wyz v0.5.1
+#11 23.38    Compiling num-traits v0.2.19
+#11 23.39     Checking funty v2.0.0
+#11 23.47     Checking zerovec v0.11.8
+#11 23.59     Checking crossbeam-utils v0.8.23
+#11 23.98     Checking libm v0.2.16
+#11 24.14     Checking http-body v1.1.0
+#11 24.48     Checking bitvec v1.1.1
+#11 24.56     Checking crypto-common v0.1.7
+#11 24.63     Checking futures-io v0.3.34
+#11 24.64    Compiling zerocopy v0.8.58
+#11 24.68     Checking tower-service v0.3.3
+#11 24.77     Checking futures-task v0.3.34
+#11 24.78     Checking crossbeam-epoch v0.9.21
+#11 24.85     Checking httpdate v1.0.3
+#11 24.95     Checking futures-util v0.3.34
+#11 24.98     Checking atomic-waker v1.1.2
+#11 25.00     Checking try-lock v0.2.5
+#11 25.04     Checking regex-syntax v0.8.11
+#11 25.06     Checking want v0.3.1
+#11 25.14     Checking crossbeam-deque v0.8.8
+#11 25.17     Checking httparse v1.10.1
+#11 25.36     Checking futures-channel v0.3.34
+#11 25.52     Checking base64 v0.22.1
+#11 25.71     Checking rayon-core v1.13.0
+#11 25.87     Checking serde v1.0.229
+#11 25.92     Checking tinystr v0.8.4
+#11 25.95     Checking form_urlencoded v1.2.2
+#11 26.03     Checking sync_wrapper v1.0.2
+#11 26.12     Checking chacha20 v0.10.2
+#11 26.15     Checking tower-layer v0.3.3
+#11 26.24     Checking writeable v0.6.4
+#11 26.37     Checking lazy_static v1.5.0
+#11 26.38     Checking mime v0.3.17
+#11 26.42     Checking litemap v0.8.3
+#11 26.47     Checking ipnet v2.12.2
+#11 26.51     Checking rayon v1.12.0
+#11 26.54     Checking getrandom v0.4.3
+#11 26.55     Checking getrandom v0.2.17
+#11 26.62     Checking errno v0.3.14
+#11 26.71     Checking parking_lot_core v0.9.12
+#11 26.72     Checking socket2 v0.6.5
+#11 26.72     Checking signal-hook-registry v1.4.8
+#11 26.75     Checking mio v1.2.3
+#11 26.79     Checking tempfile v3.27.0
+#11 26.95     Checking rand_core v0.6.4
+#11 26.98     Checking parking_lot v0.12.5
+#11 27.07     Checking cpufeatures v0.2.17
+#11 27.10     Checking rand v0.10.2
+#11 27.13     Checking icu_locale_core v2.3.0
+#11 27.14     Checking wait-timeout v0.2.1
+#11 27.27     Checking potential_utf v0.1.6
+#11 27.28     Checking zerotrie v0.2.5
+#11 27.34     Checking tokio v1.53.1
+#11 27.36     Checking http-body-util v0.1.5
+#11 27.80     Checking quick-error v1.2.3
+#11 27.87     Checking utf8_iter v1.0.4
+#11 28.01     Checking bit-vec v0.8.0
+#11 28.10     Checking icu_collections v2.3.0
+#11 28.12     Checking rusty-fork v0.3.1
+#11 28.22     Checking bit-set v0.8.0
+#11 28.29     Checking rand_xorshift v0.3.0
+#11 28.33     Checking zmij v1.0.23
+#11 28.38     Checking block-buffer v0.10.4
+#11 28.41     Checking ryu v1.0.23
+#11 28.44     Checking ff v0.14.0
+#11 28.48     Checking unarray v0.1.4
+#11 28.56     Checking hex v0.4.3
+#11 28.57     Checking group v0.14.0
+#11 28.58     Checking digest v0.10.7
+#11 28.60     Checking serde_urlencoded v0.7.1
+#11 28.61     Checking icu_provider v2.3.1
+#11 28.65     Checking serde_json v1.0.151
+#11 28.72     Checking thiserror v2.0.20
+#11 28.75     Checking icu_normalizer_data v2.3.0
+#11 28.78     Checking icu_properties_data v2.3.0
+#11 28.79     Checking inout v0.1.4
+#11 28.83     Checking hybrid-array v0.2.3
+#11 28.84     Checking rustls-pki-types v1.15.1
+#11 28.89     Checking untrusted v0.9.0
+#11 28.97     Checking static_assertions v1.1.0
+#11 28.99     Checking icu_normalizer v2.3.0
+#11 29.00     Checking ring v0.17.14
+#11 29.11     Checking icu_properties v2.3.0
+#11 29.20     Checking cipher v0.4.4
+#11 29.46    Compiling unicase v2.9.0
+#11 29.46     Checking corez v0.1.1
+#11 29.51     Checking zakura-pairing v2.2.0
+#11 29.60     Checking uuid v1.26.1
+#11 29.60     Checking utf8parse v0.2.2
+#11 29.63     Checking crypto-common v0.2.0-rc.1
+#11 29.67    Compiling mime_guess v2.0.5
+#11 29.67     Checking block-buffer v0.11.0-rc.3
+#11 29.80     Checking anstyle-parse v1.0.0
+#11 29.83     Checking maybe-rayon v0.1.1
+#11 29.86     Checking sha2 v0.10.9
+#11 29.89     Checking zakura-pasta-curves v2.2.0
+#11 29.95     Checking colorchoice v1.0.5
+#11 30.01     Checking anstyle-query v1.1.5
+#11 30.05     Checking nonempty v0.11.0
+#11 30.06     Checking is_terminal_polyfill v1.70.2
+#11 30.07     Checking bech32 v0.11.1
+#11 30.19     Checking anstyle v1.0.14
+#11 30.22     Checking bs58 v0.5.1
+#11 30.36     Checking anstream v1.0.0
+#11 30.37     Checking zakura-bls12-381 v2.2.0
+#11 30.52    Compiling itertools v0.14.0
+#11 30.52     Checking webpki-roots v1.0.9
+#11 30.55     Checking digest v0.11.0-pre.9
+#11 30.59     Checking universal-hash v0.5.1
+#11 30.60     Checking idna_adapter v1.2.2
+#11 30.61    Compiling anyhow v1.0.104
+#11 30.67     Checking idna v1.1.0
+#11 30.75     Checking opaque-debug v0.3.1
+#11 30.78     Checking http-range-header v0.4.2
+#11 30.79     Checking clap_lex v1.1.0
+#11 30.87     Checking rustls-webpki v0.103.15
+#11 30.90     Checking strsim v0.11.1
+#11 30.92     Checking poly1305 v0.8.0
+#11 30.97     Checking url v2.5.8
+#11 31.09     Checking clap_builder v4.6.6
+#11 31.10     Checking secp256k1-sys v0.10.1
+#11 31.13     Checking zakura-jubjub v2.2.0
+#11 31.13     Checking zcash_encoding v0.4.0
+#11 31.34     Checking chacha20 v0.9.1
+#11 31.37     Checking num-integer v0.1.47
+#11 31.48     Checking aead v0.5.2
+#11 31.82     Checking zcash_spec v0.2.1
+#11 31.87     Checking chacha20poly1305 v0.10.1
+#11 31.95     Checking zip32 v0.2.1
+#11 31.96     Checking rustls v0.23.44
+#11 31.96     Checking num-bigint v0.4.8
+#11 32.00     Checking secp256k1 v0.29.1
+#11 32.09     Checking ppv-lite86 v0.2.21
+#11 32.20     Checking sha2 v0.11.0-pre.4
+#11 32.42     Checking rand_chacha v0.3.1
+#11 32.49     Checking ripemd v0.2.0-pre.4
+#11 32.51     Checking hmac v0.13.0-pre.4
+#11 32.59     Checking rand v0.8.8
+#11 32.62     Checking cbc v0.1.2
+#11 32.73     Checking f4jumble v0.1.1
+#11 33.00     Checking zakura-halo2-legacy-pdqsort v2.2.0
+#11 33.46     Checking zcash_note_encryption v0.4.2
+#11 33.48     Checking zakura-reddsa v2.2.0
+#11 33.52    Compiling prost-derive v0.14.4
+#11 33.56     Checking zakura-sinsemilla v2.2.0
+#11 33.57     Checking proptest v1.6.0
+#11 33.66     Checking fpe v0.6.1
+#11 33.72     Checking zakura-halo2-poseidon v2.2.0
+#11 33.84     Checking bip32 v0.6.0-pre.1
+#11 34.03     Checking zakura-halo2-proofs v2.2.0
+#11 34.07     Checking aes v0.8.4
+#11 34.25     Checking clap v4.6.6
+#11 34.38     Checking bounded-vec v0.9.0
+#11 34.39     Checking ripemd v0.1.3
+#11 34.42     Checking sha1 v0.10.7
+#11 34.45     Checking blake2s_simd v1.0.5
+#11 34.52    Compiling foldhash v0.1.5
+#11 34.75     Checking zakura-bellman v2.2.0
+#11 34.90     Checking tokio-util v0.7.19
+#11 35.36    Compiling hashbrown v0.15.5
+#11 35.54     Checking h2 v0.4.19
+#11 35.55     Checking tower v0.5.3
+#11 35.64     Checking zcash_script v0.4.5
+#11 37.13     Checking zakura-redjubjub v2.2.0
+#11 37.42     Checking tokio-rustls v0.26.5
+#11 37.55    Compiling fixedbitset v0.5.7
+#11 37.91    Compiling darling_core v0.24.1
+#11 38.04    Compiling prost v0.14.4
+#11 38.06    Compiling time-core v0.1.9
+#11 38.13     Checking tower-http v0.6.11
+#11 38.16    Compiling cfg_aliases v0.2.2
+#11 38.27    Compiling num-conv v0.2.2
+#11 38.55    Compiling petgraph v0.8.3
+#11 38.79    Compiling nix v0.31.3
+#11 38.83    Compiling time-macros v0.2.32
+#11 39.44     Checking incrementalmerkletree v0.8.2
+#11 39.70    Compiling prost-types v0.14.4
+#11 40.17     Checking zakura-equihash v2.2.0
+#11 40.31     Checking incrementalmerkletree-testing v0.3.0
+#11 40.81     Checking zakura-sapling-crypto v2.2.0
+#11 40.83     Checking zakura-protocol v2.2.0
+#11 41.03     Checking axum-core v0.5.6
+#11 41.11     Checking serde_path_to_error v0.1.20
+#11 41.23     Checking zakura-address v2.2.0
+#11 41.67     Checking zakura-transparent v2.2.0
+#11 41.75     Checking powerfmt v0.2.0
+#11 41.95     Checking option-ext v0.2.0
+#11 42.89    Compiling prost-build v0.14.4
+#11 42.93     Checking deranged v0.5.8
+#11 43.12     Checking matchit v0.8.4
+#11 43.34    Compiling syn v1.0.109
+#11 43.60    Compiling signal-hook v0.3.18
+#11 43.64     Checking petgraph v0.7.1
+#11 43.78     Checking dirs-sys v0.5.0
+#11 43.97     Checking pin-project v1.1.13
+#11 43.99     Checking tokio-stream v0.1.19
+#11 44.07    Compiling which v8.0.6
+#11 44.39     Checking regex-automata v0.4.18
+#11 44.47     Checking wagyu-zcash-parameters-4 v0.2.0
+#11 44.61    Compiling tonic-prost-build v0.14.6
+#11 44.69     Checking wagyu-zcash-parameters-3 v0.2.0
+#11 44.71     Checking time v0.3.55
+#11 44.76     Checking wagyu-zcash-parameters-5 v0.2.0
+#11 44.81     Checking hyper v1.11.1
+#11 44.89     Checking wagyu-zcash-parameters-2 v0.2.0
+#11 44.91     Checking wagyu-zcash-parameters-1 v0.2.0
+#11 44.99     Checking wagyu-zcash-parameters-6 v0.2.0
+#11 45.00     Checking minimal-lexical v0.2.1
+#11 45.07     Checking hashbrown v0.12.3
+#11 45.28     Checking nom v7.1.3
+#11 45.48     Checking wagyu-zcash-parameters v0.2.0
+#11 45.49     Checking daggy v0.8.1
+#11 45.56     Checking hashlink v0.10.0
+#11 45.75     Checking thiserror v1.0.69
+#11 45.84    Compiling zakura-client-backend v0.1.0-rc7
+#11 45.87     Checking indexmap v1.9.3
+#11 45.88     Checking libsqlite3-sys v0.35.0
+#11 46.07    Compiling darling_macro v0.24.1
+#11 46.35     Checking directories v6.0.0
+#11 46.69     Checking hyper-util v0.1.20
+#11 46.83    Compiling itertools v0.10.5
+#11 47.02     Checking cobs v0.3.0
+#11 47.20     Checking nanorand v0.7.0
+#11 47.32     Checking semver v1.0.28
+#11 47.44    Compiling darling v0.24.1
+#11 47.48     Checking zakura-halo2-gadgets v2.2.0
+#11 47.54     Checking spin v0.9.9
+#11 47.55    Compiling serde_with_macros v3.23.0
+#11 47.65     Checking secrecy v0.8.0
+#11 47.69     Checking tinyvec_macros v0.1.1
+#11 47.71     Checking byteorder v1.5.0
+#11 47.86     Checking fallible-streaming-iterator v0.1.9
+#11 47.93     Checking fallible-iterator v0.3.0
+#11 47.97     Checking flume v0.11.1
+#11 48.16     Checking tinyvec v1.13.2
+#11 48.27     Checking zakura-zip321 v2.2.0
+#11 48.41     Checking postcard v1.1.3
+#11 48.47     Checking rusqlite v0.37.0
+#11 48.77     Checking schemerz v0.2.0
+#11 48.93     Checking shardtree v0.7.1
+#11 48.99     Checking hex-conservative v0.2.3
+#11 49.11     Checking assert_matches v1.5.0
+#11 49.16     Checking zakura-pir-enhance-types v0.0.1-rc0
+#11 49.35     Checking bitcoin_hashes v0.14.101
+#11 49.37     Checking unicode-normalization v0.1.25
+#11 49.39     Checking regex v1.13.1
+#11 49.39     Checking matchers v0.2.0
+#11 49.59     Checking rand_distr v0.6.0
+#11 50.02     Checking sharded-slab v0.1.7
+#11 50.02     Checking tracing-log v0.2.0
+#11 50.50     Checking thread_local v1.1.10
+#11 50.59     Checking hyper-rustls v0.27.9
+#11 51.27     Checking hyper-timeout v0.5.2
+#11 51.35     Checking reqwest v0.12.28
+#11 51.39     Checking axum v0.8.9
+#11 51.46     Checking serde_with v3.23.0
+#11 51.56     Checking nu-ansi-term v0.50.3
+#11 51.57     Checking zakura-orchard v2.2.0
+#11 51.75     Checking schemerz-rusqlite v0.370.0
+#11 52.54     Checking async-stream v0.3.6
+#11 52.89     Checking bip39 v2.2.2
+#11 52.89     Checking tracing-subscriber v0.3.23
+#11 55.74     Checking thus-spoke-zakura v0.3.0 (/src/crates/ths-cli)
+#11 60.37    Compiling ambassador v0.4.2
+#11 67.61     Checking zakura-primitives v2.2.0
+#11 67.61     Checking zakura-keys v2.2.0
+#11 69.22 error[E0061]: this function takes 4 arguments but 3 arguments were supplied
+#11 69.22    --> crates/ths-cli/src/../tests/unit/updater/tests.rs:117:5
+#11 69.22     |
+#11 69.22 117 |       run_installer(
+#11 69.22     |  _____^^^^^^^^^^^^^-
+#11 69.22 118 | |         "printf 0.2.1 > \"$THS_INSTALL_DIR/ths.new\" && mv -f \"$THS_INSTALL_DIR/ths.new\" \"$THS_INSTALL_DIR/ths\"\n",
+#11 69.22 119 | |         &Version::new(0, 2, 1),
+#11 69.22 120 | |         resolved.parent().unwrap(),
+#11 69.22 121 | |     )
+#11 69.22     | |_____- argument #4 of type `bool` is missing
+#11 69.22     |
+#11 69.22 note: function defined here
+#11 69.22    --> crates/ths-cli/src/updater.rs:211:4
+#11 69.22     |
+#11 69.22 211 | fn run_installer(script: &str, version: &Version, install_dir: &Path, json: bool) -> Result<()> {
+#11 69.22     |    ^^^^^^^^^^^^^                                                      ----------
+#11 69.22 help: provide the argument
+#11 69.22     |
+#11 69.22 117 |     run_installer(
+#11 69.22 ...
+#11 69.22 120 |         resolved.parent().unwrap(),
+#11 69.22 121 ~         /* bool */,
+#11 69.22 122 ~     )
+#11 69.22     |
+#11 69.22 
+#11 70.23     Checking tonic v0.14.6
+#11 71.67     Checking zakura-proofs v2.2.0
+#11 71.67     Checking zakura-pczt v0.1.0-rc4
+#11 75.22 For more information about this error, try `rustc --explain E0061`.
+#11 75.27     Checking tonic-prost v0.14.6
+#11 75.29 error: could not compile `thus-spoke-zakura` (lib test) due to 1 previous error
+#11 75.29 warning: build failed, waiting for other jobs to finish...
+#11 ERROR: process "/bin/sh -c cargo clippy --workspace --all-targets --all-features -- -D warnings" did not complete successfully: exit code: 101
+------
+ > [rust 7/9] RUN --mount=type=cache,target=/usr/local/cargo/registry --mount=type=cache,target=/usr/local/cargo/git --mount=type=cache,target=/src/target cargo clippy --workspace --all-targets --all-features -- -D warnings:
+69.22 122 ~     )
+69.22     |
+69.22 
+70.23     Checking tonic v0.14.6
+71.67     Checking zakura-proofs v2.2.0
+71.67     Checking zakura-pczt v0.1.0-rc4
+75.22 For more information about this error, try `rustc --explain E0061`.
+75.27     Checking tonic-prost v0.14.6
+75.29 error: could not compile `thus-spoke-zakura` (lib test) due to 1 previous error
+75.29 warning: build failed, waiting for other jobs to finish...
+------
+Dockerfile:21
+--------------------
+  19 |     
+  20 |     COPY . .
+  21 | >>> RUN --mount=type=cache,target=/usr/local/cargo/registry --mount=type=cache,target=/usr/local/cargo/git --mount=type=cache,target=/src/target cargo clippy --workspace --all-targets --all-features -- -D warnings
+  22 |     RUN --mount=type=cache,target=/usr/local/cargo/registry --mount=type=cache,target=/usr/local/cargo/git --mount=type=cache,target=/src/target cargo test --workspace -- --test-threads=1
+  23 |     RUN --mount=type=cache,target=/usr/local/cargo/registry --mount=type=cache,target=/usr/local/cargo/git --mount=type=cache,target=/src/target cargo test -p thus-spoke-zakura --features release-distribution -- --test-threads=1
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c cargo clippy --workspace --all-targets --all-features -- -D warnings" did not complete successfully: exit code: 101
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/we32v05swa07nwa3o6cn2s4jj
