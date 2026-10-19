@@ -1,0 +1,13 @@
+
+> thus-spoke-zakura-web@0.1.0 test
+> vitest run src/features/wallet/ActivityList.test.tsx
+
+
+ RUN  v5.0.1 /Users/zeeshan/zakura-fix-317/web
+
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  11:41:52
+   Duration  2.06s (environment 46%, import 19%, transform 17%, tests 12%, setup 5%)
+

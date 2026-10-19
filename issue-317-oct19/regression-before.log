@@ -1,0 +1,447 @@
+
+> thus-spoke-zakura-web@0.1.0 test
+> vitest run src/features/wallet/ActivityList.test.tsx -t updates idle ages beside
+
+
+ RUN  v5.0.1 /Users/zeeshan/zakura-fix-317/web
+
+ ❯ src/features/wallet/ActivityList.test.tsx (8 tests | 1 failed | 7 skipped) 115ms
+   ❯ ActivityList clock (1)
+     × updates idle ages beside unknown timestamps without fetching and clears its timer on unmount 112ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/wallet/ActivityList.test.tsx > ActivityList clock > updates idle ages beside unknown timestamps without fetching and clears its timer on unmount
+TestingLibraryElementError: Unable to find an element with the text: Block 121. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33mclass[39m=[32m"xp-window overflow-hidden rounded-xs min-w-0"[39m
+    [36m>[39m
+      [36m<header[39m
+        [33mclass[39m=[32m"xp-caption flex items-center justify-between gap-3 px-4 py-2.5"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"flex min-w-0 items-baseline gap-2"[39m
+        [36m>[39m
+          [36m<h2[39m
+            [33mclass[39m=[32m"truncate text-[13px] font-bold tracking-[0.01em]"[39m
+          [36m>[39m
+            [0mRecent activity[0m
+          [36m</h2>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"flex shrink-0 items-center gap-2"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"inline-flex items-center justify-center rounded-xs border px-2 py-0.5 text-[11px] font-bold tracking-[0.08em] uppercase border-line bg-raised text-ink-muted"[39m
+          [36m>[39m
+            [0m3[0m
+            [0m event[0m
+            [0ms[0m
+          [36m</span>[39m
+        [36m</div>[39m
+      [36m</header>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"overflow-x-auto"[39m
+      [36m>[39m
+        [36m<table[39m
+          [33mclass[39m=[32m"w-full min-w-[520px] text-[13px]"[39m
+        [36m>[39m
+          [36m<thead>[39m
+            [36m<tr[39m
+              [33mclass[39m=[32m"border-line-strong bg-raised sticky top-0 z-10 border-b-2"[39m
+            [36m>[39m
+              [36m<th[39m
+                [33mclass[39m=[32m"text-ink px-5 py-3 text-[11px] font-bold tracking-[0.12em] uppercase text-left"[39m
+                [33mscope[39m=[32m"col"[39m
+                [33mstyle[39m=[32m"width: 196px;"[39m
+              [36m>[39m
+                [0mTransfer[0m
+              [36m</th>[39m
+              [36m<th[39m
+                [33mclass[39m=[32m"text-ink px-5 py-3 text-[11px] font-bold tracking-[0.12em] uppercase text-left max-sm:hidden"[39m
+                [33mscope[39m=[32m"col"[39m
+                [33mstyle[39m=[32m"width: 172px;"[39m
+              [36m>[39m
+                [0mRoute[0m
+              [36m</th>[39m
+              [36m<th[39m
+                [33mclass[39m=[32m"text-ink px-5 py-3 text-[11px] font-bold tracking-[0.12em] uppercase text-left"[39m
+                [33mscope[39m=[32m"col"[39m
+              [36m>[39m
+                [0mTransaction[0m
+              [36m</th>[39m
+              [36m<th[39m
+                [33mclass[39m=[32m"text-ink px-5 py-3 text-[11px] font-bold tracking-[0.12em] uppercase text-right"[39m
+                [33mscope[39m=[32m"col"[39m
+                [33mstyle[39m=[32m"width: 92px;"[39m
+              [36m>[39m
+                [0mAmount[0m
+              [36m</th>[39m
+              [36m<th[39m
+                [33mclass[39m=[32m"text-ink px-5 py-3 text-[11px] font-bold tracking-[0.12em] uppercase text-right max-sm:hidden"[39m
+                [33mscope[39m=[32m"col"[39m
+                [33mstyle[39m=[32m"width: 104px;"[39m
+              [36m>[39m
+                [0mWhen[0m
+              [36m</th>[39m
+              [36m<th[39m
+                [33mclass[39m=[32m"text-ink px-5 py-3 text-[11px] font-bold tracking-[0.12em] uppercase text-right"[39m
+                [33mscope[39m=[32m"col"[39m
+                [33mstyle[39m=[32m"width: 100px;"[39m
+              [36m>[39m
+                [0mStatus[0m
+              [36m</th>[39m
+            [36m</tr>[39m
+          [36m</thead>[39m
+          [36m<tbody>[39m
+            [36m<tr[39m
+              [33mclass[39m=[32m"border-line hover:bg-accent-soft animate-fade-in border-b transition-colors last:border-b-0 [&>td]:px-5 [&>td]:py-3.5 [&>td]:align-middle"[39m
+              [33mstyle[39m=[32m"animation-delay: 0ms;"[39m
+            [36m>[39m
+              [36m<td>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"flex items-center gap-2.5"[39m
+                [36m>[39m
+                  [36m<span[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"xp-raised grid size-6 shrink-0 place-items-center rounded-xs bg-raised text-ink-muted"[39m
+                  [36m>[39m
+                    [36m<svg[39m
+                      [33maria-hidden[39m=[32m"true"[39m
+                      [33mclass[39m=[32m"lucide lucide-arrow-right size-3"[39m
+                      [33mfill[39m=[32m"none"[39m
+                      [33mheight[39m=[32m"24"[39m
+                      [33mstroke[39m=[32m"currentColor"[39m
+                      [33mstroke-linecap[39m=[32m"round"[39m
+                      [33mstroke-linejoin[39m=[32m"round"[39m
+                      [33mstroke-width[39m=[32m"2"[39m
+                      [33mviewBox[39m=[32m"0 0 24 24"[39m
+                      [33mwidth[39m=[32m"24"[39m
+                      [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                    [36m>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m"M5 12h14"[39m
+                      [36m/>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m"m12 5 7 7-7 7"[39m
+                      [36m/>[39m
+                    [36m</svg>[39m
+                  [36m</span>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"min-w-0 truncate font-semibold"[39m
+                  [36m>[39m
+                    [0mAccount 1 → Account 2[0m
+                  [36m</span>[39m
+                [36m</div>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"max-sm:hidden"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-[11px] font-bold tracking-[0.04em] uppercase text-accent"[39m
+                [36m>[39m
+                  [0mironwood[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-ink-muted px-1.5"[39m
+                [36m>[39m
+                  [0m→[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-[11px] font-bold tracking-[0.04em] uppercase text-accent"[39m
+                [36m>[39m
+                  [0mironwood[0m
+                [36m</span>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"min-w-0"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-ink-muted relative"[39m
+                [36m>[39m
+                  [36m<span[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                  [36m>[39m
+                    [0m—[0m
+                  [36m</span>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"sr-only"[39m
+                  [36m>[39m
+                    [0mNot prepared[0m
+                  [36m</span>[39m
+                [36m</span>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"text-right tabular-nums font-semibold"[39m
+              [36m>[39m
+                [0m0.001 ZEC[0m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"text-right tabular-nums text-ink-muted max-sm:hidden"[39m
+              [36m>[39m
+                [36m<time[39m
+                  [33mdatetime[39m=[32m"2026-10-15 12:00:00"[39m
+                  [33mtitle[39m=[32m"10/15/2026, 5:30:00 PM"[39m
+                [36m>[39m
+                  [0mjust now[0m
+                [36m</time>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"text-right"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"inline-flex items-center justify-center rounded-xs border px-2 py-0.5 text-[11px] font-bold tracking-[0.08em] uppercase border-warning/35 bg-warning-soft text-warning"[39m
+                [36m>[39m
+                  [0mpreparing[0m
+                [36m</span>[39m
+              [36m</td>[39m
+            [36m</tr>[39m
+            [36m<tr[39m
+              [33mclass[39m=[32m"border-line hover:bg-accent-soft animate-fade-in border-b transition-colors last:border-b-0 [&>td]:px-5 [&>td]:py-3.5 [&>td]:align-middle"[39m
+              [33mstyle[39m=[32m"animation-delay: 30ms;"[39m
+            [36m>[39m
+              [36m<td>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"flex items-center gap-2.5"[39m
+                [36m>[39m
+                  [36m<span[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"xp-raised grid size-6 shrink-0 place-items-center rounded-xs bg-accent-soft text-accent"[39m
+                  [36m>[39m
+                    [36m<svg[39m
+                      [33maria-hidden[39m=[32m"true"[39m
+                      [33mclass[39m=[32m"lucide lucide-arrow-down-to-line size-3"[39m
+                      [33mfill[39m=[32m"none"[39m
+                      [33mheight[39m=[32m"24"[39m
+                      [33mstroke[39m=[32m"currentColor"[39m
+                      [33mstroke-linecap[39m=[32m"round"[39m
+                      [33mstroke-linejoin[39m=[32m"round"[39m
+                      [33mstroke-width[39m=[32m"2"[39m
+                      [33mviewBox[39m=[32m"0 0 24 24"[39m
+                      [33mwidth[39m=[32m"24"[39m
+                      [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                    [36m>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m"M12 17V3"[39m
+                      [36m/>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m"m6 11 6 6 6-6"[39m
+                      [36m/>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m"M19 21H5"[39m
+                      [36m/>[39m
+                    [36m</svg>[39m
+                  [36m</span>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"min-w-0 truncate font-semibold"[39m
+                  [36m>[39m
+                    [0mExternal → Account 2[0m
+                  [36m</span>[39m
+                [36m</div>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"max-sm:hidden"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-[11px] font-bold tracking-[0.04em] uppercase text-ink-muted"[39m
+                [36m>[39m
+                  [0munknown[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-ink-muted px-1.5"[39m
+                [36m>[39m
+                  [0m→[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-[11px] font-bold tracking-[0.04em] uppercase text-accent"[39m
+                [36m>[39m
+                  [0mironwood[0m
+                [36m</span>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"min-w-0"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-ink-muted relative"[39m
+                [36m>[39m
+                  [36m<span[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                  [36m>[39m
+                    [0m—[0m
+                  [36m</span>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"sr-only"[39m
+                  [36m>[39m
+                    [0mNot prepared[0m
+                  [36m</span>[39m
+                [36m</span>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"text-right tabular-nums font-semibold"[39m
+              [36m>[39m
+                [0m0.001 ZEC[0m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"text-right tabular-nums text-ink-muted max-sm:hidden"[39m
+              [36m>[39m
+                [36m<time[39m
+                  [33mtitle[39m=[32m"—"[39m
+                [36m>[39m
+                  [0m—[0m
+                [36m</time>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"text-right"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"inline-flex items-center justify-center rounded-xs border px-2 py-0.5 text-[11px] font-bold tracking-[0.08em] uppercase border-positive/35 bg-positive-soft text-positive"[39m
+                [36m>[39m
+                  [0mconfirmed[0m
+                [36m</span>[39m
+              [36m</td>[39m
+            [36m</tr>[39m
+            [36m<tr[39m
+              [33mclass[39m=[32m"border-line hover:bg-accent-soft animate-fade-in border-b transition-colors last:border-b-0 [&>td]:px-5 [&>td]:py-3.5 [&>td]:align-middle"[39m
+              [33mstyle[39m=[32m"animation-delay: 60ms;"[39m
+            [36m>[39m
+              [36m<td>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"flex items-center gap-2.5"[39m
+                [36m>[39m
+                  [36m<span[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"xp-raised grid size-6 shrink-0 place-items-center rounded-xs bg-accent-soft text-accent"[39m
+                  [36m>[39m
+                    [36m<svg[39m
+                      [33maria-hidden[39m=[32m"true"[39m
+                      [33mclass[39m=[32m"lucide lucide-arrow-down-to-line size-3"[39m
+                      [33mfill[39m=[32m"none"[39m
+                      [33mheight[39m=[32m"24"[39m
+                      [33mstroke[39m=[32m"currentColor"[39m
+                      [33mstroke-linecap[39m=[32m"round"[39m
+                      [33mstroke-linejoin[39m=[32m"round"[39m
+                      [33mstroke-width[39m=[32m"2"[39m
+                      [33mviewBox[39m=[32m"0 0 24 24"[39m
+                      [33mwidth[39m=[32m"24"[39m
+                      [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                    [36m>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m"M12 17V3"[39m
+                      [36m/>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m"m6 11 6 6 6-6"[39m
+                      [36m/>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m"M19 21H5"[39m
+                      [36m/>[39m
+                    [36m</svg>[39m
+                  [36m</span>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"min-w-0 truncate font-semibold"[39m
+                  [36m>[39m
+                    [0mExternal → Account 2[0m
+                  [36m</span>[39m
+                [36m</div>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"max-sm:hidden"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-[11px] font-bold tracking-[0.04em] uppercase text-ink-muted"[39m
+                [36m>[39m
+                  [0munknown[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-ink-muted px-1.5"[39m
+                [36m>[39m
+                  [0m→[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-[11px] font-bold tracking-[0.04em] uppercase text-accent"[39m
+                [36m>[39m
+                  [0mironwood[0m
+                [36m</span>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"min-w-0"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"text-ink-muted relative"[39m
+                [36m>[39m
+                  [36m<span[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                  [36m>[39m
+                    [0m—[0m
+                  [36m</span>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m"sr-only"[39m
+                  [36m>[39m
+                    [0mNot prepared[0m
+                  [36m</span>[39m
+                [36m</span>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"text-right tabular-nums font-semibold"[39m
+              [36m>[39m
+                [0m0.001 ZEC[0m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"text-right tabular-nums text-ink-muted max-sm:hidden"[39m
+              [36m>[39m
+                [36m<time[39m
+                  [33mtitle[39m=[32m"—"[39m
+                [36m>[39m
+                  [0m—[0m
+                [36m</time>[39m
+              [36m</td>[39m
+              [36m<td[39m
+                [33mclass[39m=[32m"text-right"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"inline-flex items-center justify-center rounded-xs border px-2 py-0.5 text-[11px] font-bold tracking-[0.08em] uppercase border-positive/35 bg-positive-soft text-positive"[39m
+                [36m>[39m
+                  [0mconfirmed[0m
+                [36m</span>[39m
+              [36m</td>[39m
+            [36m</tr>[39m
+          [36m</tbody>[39m
+        [36m</table>[39m
+      [36m</div>[39m
+    [36m</section>[39m
+    [36m<div[39m
+      [33maria-label[39m=[32m"Notifications (F8)"[39m
+      [33mrole[39m=[32m"region"[39m
+      [33mstyle[39m=[32m"pointer-events: none;"[39m
+      [33mtabindex[39m=[32m"-1"[39m
+    [36m>[39m
+      [36m<ol[39m
+        [33mclass[39m=[32m"fixed top-5 right-5 z-100 flex max-h-[calc(100dvh-40px)] w-[min(388px,calc(100vw-40px))] flex-col gap-2 overflow-y-auto overscroll-contain p-1 outline-none"[39m
+        [33mtabindex[39m=[32m"-1"[39m
+      [36m/>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+ ❯ Object.getElementError ../../zakura-241-investigation/web/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../../zakura-241-investigation/web/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../../zakura-241-investigation/web/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ ../../zakura-241-investigation/web/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/features/wallet/ActivityList.test.tsx:256:21
+    254|       const title = time.title;
+    255|       expect(time).toHaveTextContent('just now');
+    256|       expect(screen.getByText('Block 121')).toBeInTheDocument();
+       |                     ^
+    257|       expect(screen.getByLabelText('Time unknown')).toBeInTheDocument(…
+    258|       expect(container.querySelectorAll('time')).toHaveLength(1);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  11:41:15
+   Duration  3.34s (environment 48%, import 23%, transform 18%, setup 7%, tests 4%)
+

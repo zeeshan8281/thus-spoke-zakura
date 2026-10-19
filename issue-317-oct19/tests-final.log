@@ -1,0 +1,20 @@
+
+> thus-spoke-zakura-web@0.1.0 test
+> vitest run --maxWorkers=1
+
+
+ RUN  v5.0.1 /Users/zeeshan/zakura-fix-317/web
+
+Not implemented: navigation to another Document
+Not implemented: navigation to another Document
+Not implemented: navigation to another Document
+Not implemented: navigation to another Document
+
+ Test Files  33 passed (33)
+      Tests  387 passed (387)
+   Start at  11:47:10
+   Duration  48.99s (tests 68%, environment 20%, import 7%, setup 2%, transform 2%)
+
+    Isolate  33 workers spawned · ~348ms startup each (spawn + environment, per file)
+             at least ~11.15s faster with isolate: false — reuses workers across files instead of one per file
+
