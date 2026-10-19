@@ -1,0 +1,205 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load remote build context
+#1 DONE 0.5s
+
+#1 [internal] load remote build context
+#1 DONE 0.5s
+
+#2 copy /context /
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/node:24-alpine
+#3 ...
+
+#4 [auth] library/debian:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [auth] library/node:pull token for registry-1.docker.io
+#5 DONE 0.0s
+
+#6 [internal] load metadata for docker.io/library/rust:1.98-bookworm
+#6 DONE 0.9s
+
+#7 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#7 DONE 1.5s
+
+#3 [internal] load metadata for docker.io/library/node:24-alpine
+#3 DONE 2.5s
+
+#8 [stage-0 1/8] FROM docker.io/library/rust:1.98-bookworm@sha256:93ce27a88655056a51dbdd8f5f2d7ddc071c7b0070fb288a37b5a285fc83971e
+#8 resolve docker.io/library/rust:1.98-bookworm@sha256:93ce27a88655056a51dbdd8f5f2d7ddc071c7b0070fb288a37b5a285fc83971e 0.0s done
+#8 DONE 0.1s
+
+#9 [stage-0 2/8] WORKDIR /src
+#9 CACHED
+
+#10 [stage-2 1/4] FROM docker.io/library/debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587
+#10 resolve docker.io/library/debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587 0.0s done
+#10 DONE 0.0s
+
+#11 [web 1/6] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#11 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f 0.0s done
+#11 sha256:633ba0417cc75a37c8c074ff0c47e75b281c63deebdb2f70f3ffa435a87ccc89 0B / 445B 0.2s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 0B / 56.78MB 0.2s
+#11 sha256:9980a296d082ba2e6df2fe57e4e752c11c16f4f6369b8ae36c42be09a3237527 0B / 1.26MB 0.2s
+#11 sha256:633ba0417cc75a37c8c074ff0c47e75b281c63deebdb2f70f3ffa435a87ccc89 445B / 445B 0.3s done
+#11 sha256:a9986cd6f37dbddae7862a6d4be71683472e7c2ea708e87db14f8a6393c00f00 0B / 4.19MB 0.2s
+#11 sha256:9980a296d082ba2e6df2fe57e4e752c11c16f4f6369b8ae36c42be09a3237527 1.26MB / 1.26MB 0.6s done
+#11 sha256:a9986cd6f37dbddae7862a6d4be71683472e7c2ea708e87db14f8a6393c00f00 4.19MB / 4.19MB 1.0s done
+#11 extracting sha256:a9986cd6f37dbddae7862a6d4be71683472e7c2ea708e87db14f8a6393c00f00 0.1s done
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 3.15MB / 56.78MB 2.0s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 7.34MB / 56.78MB 2.6s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 10.49MB / 56.78MB 2.9s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 13.63MB / 56.78MB 3.0s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 17.83MB / 56.78MB 3.5s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 22.02MB / 56.78MB 3.8s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 25.17MB / 56.78MB 4.1s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 28.31MB / 56.78MB 4.4s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 31.46MB / 56.78MB 4.5s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 34.60MB / 56.78MB 4.8s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 37.75MB / 56.78MB 5.1s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 41.94MB / 56.78MB 5.6s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 46.14MB / 56.78MB 6.0s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 50.33MB / 56.78MB 6.3s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 54.53MB / 56.78MB 6.6s
+#11 sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 56.78MB / 56.78MB 6.8s done
+#11 extracting sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047
+#11 extracting sha256:96c9e20187652156868199b37841dc9a00b9a0dfe8cd51ea8425764a44a04047 0.7s done
+#11 DONE 7.6s
+
+#11 [web 1/6] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#11 extracting sha256:9980a296d082ba2e6df2fe57e4e752c11c16f4f6369b8ae36c42be09a3237527 0.0s done
+#11 extracting sha256:633ba0417cc75a37c8c074ff0c47e75b281c63deebdb2f70f3ffa435a87ccc89 done
+#11 DONE 7.6s
+
+#12 [web 2/6] WORKDIR /src/web
+#12 DONE 0.2s
+
+#13 [web 3/6] COPY web/package.json web/package-lock.json* ./
+#13 DONE 0.0s
+
+#14 [web 4/6] RUN npm ci
+#14 6.900 
+#14 6.900 added 308 packages, and audited 309 packages in 7s
+#14 6.900 
+#14 6.900 67 packages are looking for funding
+#14 6.900   run `npm fund` for details
+#14 6.902 
+#14 6.902 1 high severity vulnerability
+#14 6.902 
+#14 6.902 To address all issues, run:
+#14 6.902   npm audit fix
+#14 6.902 
+#14 6.902 Run `npm audit` for details.
+#14 6.906 npm notice
+#14 6.906 npm notice New major version of npm available! 11.19.1 -> 12.2.0
+#14 6.906 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+#14 6.906 npm notice To update run: npm install -g npm@12.2.0
+#14 6.906 npm notice
+#14 DONE 7.3s
+
+#15 [web 5/6] COPY web/ ./
+#15 DONE 0.1s
+
+#16 [web 6/6] RUN npm run build
+#16 0.216 
+#16 0.216 > thus-spoke-zakura-web@0.1.0 build
+#16 0.216 > tsc -b && vite build
+#16 0.216 
+#16 5.719 vite v8.3.0 building client environment for production...
+#16 5.727 transforming...
+#16 7.106 ✓ 2169 modules transformed.
+#16 7.253 rendering chunks...
+#16 7.666 computing gzip size...
+#16 7.677 dist/index.html                                             0.88 kB │ gzip:   0.51 kB
+#16 7.677 dist/assets/manrope-vietnamese-500-normal-DCXiE_xi.woff2    4.32 kB
+#16 7.677 dist/assets/manrope-vietnamese-400-normal-DHb3EETF.woff2    4.46 kB
+#16 7.677 dist/assets/manrope-vietnamese-600-normal-C1J5PCl_.woff2    4.46 kB
+#16 7.677 dist/assets/manrope-vietnamese-700-normal-CUqMx5-1.woff2    4.55 kB
+#16 7.677 dist/assets/manrope-greek-600-normal-BoRV6lzK.woff2         5.23 kB
+#16 7.677 dist/assets/manrope-greek-700-normal-CHUG9PD8.woff2         5.23 kB
+#16 7.677 dist/assets/manrope-greek-500-normal-GeMIHyWm.woff2         5.25 kB
+#16 7.677 dist/assets/manrope-greek-400-normal-CM4qok81.woff2         5.28 kB
+#16 7.677 dist/assets/manrope-vietnamese-500-normal-DaZ8i3XM.woff     6.06 kB
+#16 7.677 dist/assets/manrope-vietnamese-400-normal-D7E_mLGF.woff     6.10 kB
+#16 7.677 dist/assets/manrope-vietnamese-600-normal-lA7a_7Ok.woff     6.14 kB
+#16 7.677 dist/assets/manrope-vietnamese-700-normal-pt65Fn2Z.woff     6.36 kB
+#16 7.677 dist/assets/manrope-greek-600-normal-CF2i9ZRY.woff          6.74 kB
+#16 7.677 dist/assets/manrope-greek-700-normal-DyfsrCpP.woff          6.74 kB
+#16 7.677 dist/assets/manrope-greek-500-normal-DyxYGEtJ.woff          6.76 kB
+#16 7.677 dist/assets/manrope-greek-400-normal-DuX9RsAR.woff          6.77 kB
+#16 7.677 dist/assets/dm-mono-latin-ext-500-normal-Dw3M13d8.woff      7.48 kB
+#16 7.677 dist/assets/dm-mono-latin-ext-400-normal-1aZr6b2b.woff      7.50 kB
+#16 7.677 dist/assets/manrope-cyrillic-400-normal-BMzJvInZ.woff2      7.84 kB
+#16 7.677 dist/assets/manrope-cyrillic-700-normal-Dw_fZAg2.woff2      7.85 kB
+#16 7.677 dist/assets/manrope-cyrillic-500-normal-B1OEZity.woff2      7.87 kB
+#16 7.677 dist/assets/manrope-cyrillic-600-normal-DvRl3Mj-.woff2      7.87 kB
+#16 7.677 dist/assets/manrope-latin-ext-500-normal-dm74KBQw.woff2     8.19 kB
+#16 7.677 dist/assets/manrope-latin-ext-700-normal-DYOwVNan.woff2     8.27 kB
+#16 7.677 dist/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2     8.29 kB
+#16 7.677 dist/assets/manrope-latin-ext-600-normal-_gBojHdJ.woff2     8.30 kB
+#16 7.677 dist/assets/dm-mono-latin-ext-400-normal-C2zvOubV.woff2     9.55 kB
+#16 7.677 dist/assets/dm-mono-latin-ext-500-normal-BtRyHRi6.woff2     9.61 kB
+#16 7.677 dist/assets/manrope-cyrillic-700-normal-7JNVKxyl.woff      10.00 kB
+#16 7.677 dist/assets/manrope-cyrillic-500-normal-CNwnNrRC.woff      10.01 kB
+#16 7.677 dist/assets/manrope-cyrillic-400-normal-Dvx59UGC.woff      10.03 kB
+#16 7.677 dist/assets/manrope-cyrillic-600-normal-It4mZcQk.woff      10.06 kB
+#16 7.677 dist/assets/dm-mono-latin-400-normal--0xN8mdc.woff         11.21 kB
+#16 7.677 dist/assets/dm-mono-latin-500-normal-CN8Miw6E.woff         11.24 kB
+#16 7.677 dist/assets/manrope-latin-ext-500-normal-EtoS1VaI.woff     11.24 kB
+#16 7.677 dist/assets/manrope-latin-ext-600-normal-u5Pl7hTU.woff     11.24 kB
+#16 7.677 dist/assets/manrope-latin-ext-400-normal-C-X6QNXX.woff     11.31 kB
+#16 7.677 dist/assets/manrope-latin-ext-700-normal-eVCcYqtJ.woff     11.35 kB
+#16 7.677 dist/assets/manrope-latin-500-normal-BYYD-dBL.woff2        14.04 kB
+#16 7.677 dist/assets/manrope-latin-400-normal-PaqtzbVb.woff2        14.10 kB
+#16 7.677 dist/assets/manrope-latin-600-normal-4f0koTD-.woff2        14.17 kB
+#16 7.677 dist/assets/manrope-latin-700-normal-BZp_XxE4.woff2        14.21 kB
+#16 7.677 dist/assets/dm-mono-latin-400-normal-4GdczIuU.woff2        14.82 kB
+#16 7.677 dist/assets/dm-mono-latin-500-normal-DRMDZjhP.woff2        14.98 kB
+#16 7.677 dist/assets/manrope-latin-500-normal-DMZssgOp.woff         18.24 kB
+#16 7.677 dist/assets/manrope-latin-400-normal-8tf8FM3T.woff         18.29 kB
+#16 7.677 dist/assets/manrope-latin-600-normal-BqgrALkZ.woff         18.38 kB
+#16 7.677 dist/assets/manrope-latin-700-normal-DGRFkw-m.woff         18.41 kB
+#16 7.677 dist/assets/index-C7VQvHJ4.css                             71.66 kB │ gzip:  24.99 kB
+#16 7.677 dist/assets/index-BUY9Bkqw.js                             688.52 kB │ gzip: 215.18 kB │ map: 3,393.24 kB
+#16 7.677 
+#16 7.679 [plugin builtin:vite-reporter] 
+#16 7.679 (!) Some chunks are larger than 500 kB after minification. Consider:
+#16 7.679 - Using dynamic import() to code-split the application
+#16 7.679 - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+#16 7.679 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+#16 7.683 ✓ built in 1.96s
+#16 DONE 7.8s
+
+#17 [rust 5/5] RUN --mount=type=cache,target=/usr/local/cargo/registry     --mount=type=cache,target=/usr/local/cargo/git     --mount=type=cache,target=/src/target     cargo build --profile "dev" --locked -p ths-server &&     if [ "dev" = dev ]; then target_dir=debug; else target_dir="dev"; fi &&     cp "/src/target/$target_dir/ths-server" /tmp/ths-server && strip /tmp/ths-server
+#17 CACHED
+
+#18 [stage-2 2/4] RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/*
+#18 CACHED
+
+#19 [rust 3/5] COPY Cargo.toml Cargo.lock* rust-toolchain.toml ./
+#19 CACHED
+
+#20 [rust 4/5] COPY crates/ crates/
+#20 CACHED
+
+#21 [stage-2 3/4] COPY --from=rust /tmp/ths-server /usr/local/bin/ths-server
+#21 CACHED
+
+#22 [stage-2 4/4] COPY --from=web /src/web/dist /opt/ths/web
+#22 DONE 0.0s
+
+#23 exporting to image
+#23 exporting layers
+#23 exporting layers 0.3s done
+#23 exporting manifest sha256:3f2ac9bcbd4e6a34dfca16c132dfb2197ffff59e61fde9f227bc37df5f36cd36
+#23 exporting manifest sha256:3f2ac9bcbd4e6a34dfca16c132dfb2197ffff59e61fde9f227bc37df5f36cd36 done
+#23 exporting config sha256:0eccdd9e5e391ee3885f9e04d6bf82e1394fc96f52f5a5d69394593807272a1c done
+#23 exporting attestation manifest sha256:3337a07c93eff144e5b37c34d4ee9743b666b4713747c90cfdb9aa18c1890a64 done
+#23 exporting manifest list sha256:556495acea6063d99b22ed1f926dbe5b01e5ddd490731862a2da3b0f0ad52943 done
+#23 naming to docker.io/library/zakura-275-oct20:local done
+#23 unpacking to docker.io/library/zakura-275-oct20:local 0.0s done
+#23 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/kraorzyzivwxdq96hgmm81wrd
