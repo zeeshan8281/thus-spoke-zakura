@@ -1,0 +1,1 @@
+PASS: confirmed transfer belongs to active block 106; transaction, block and activity hashes match.

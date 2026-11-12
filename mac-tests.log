@@ -1,0 +1,7 @@
+Installed ths 9.8.7 to /var/folders/bw/gk399sm132b7fvc8s2jbjvc40000gn/T/ths-install-test.XXXXXX.pGQCJYZc1v/install
+Installed ths 8.0.0 to /var/folders/bw/gk399sm132b7fvc8s2jbjvc40000gn/T/ths-install-test.XXXXXX.pGQCJYZc1v/install
+Installed ths 8.0.0 to /var/folders/bw/gk399sm132b7fvc8s2jbjvc40000gn/T/ths-install-test.XXXXXX.pGQCJYZc1v/install
+Checksum verification failed for ths-aarch64-apple-darwin.tar.gz
+tar: Missing type keyword in mtree specification
+tar: Error exit delayed from previous errors.
+installer tests passed

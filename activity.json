@@ -1,0 +1,74 @@
+[
+  {
+    "id": "8abc4c75-53e4-48ba-90f8-072101b4d2ca",
+    "kind": "send",
+    "direction": "internal",
+    "from_account": 1,
+    "to_account": 2,
+    "from_accounts": [
+      1
+    ],
+    "to_accounts": [
+      2
+    ],
+    "to_address": null,
+    "recipient_addresses": [
+      "uregtest1fglg8gvt5luptyqvrx0u52yam4cru63skg9s0sa6zth72hachgyhwm8e7p9vy2vcatws7wvzfhnrqte4nwrff7tju4dv35gdn4h8ekarqyeqlk5gpmm5zlphzls960xe20cajd0k4vcvm2j8sekz77f864sgedncru8u8ruz8gvnpuxvnk7qcyszj7jg5n7nqqqfswh736c2kt4s7ad"
+    ],
+    "source_pool": "ironwood",
+    "destination_pool": "ironwood",
+    "source_pools": [
+      "ironwood"
+    ],
+    "destination_pools": [
+      "ironwood"
+    ],
+    "amount_zatoshi": 100000000,
+    "received_zatoshi": 499990000,
+    "spent_zatoshi": 500000000,
+    "net_zatoshi": -10000,
+    "txid": "7f906114a1d9f771e1918c3866b04e5e527e5c70e6e9e7dcfe9dc72f648e5065",
+    "block_hash": "747d71213cae3f8cd88c64f6771a92208d6c1fee7cbb9bb2be124b604e535631",
+    "mined_height": 106,
+    "confirmations": 1,
+    "status": "confirmed",
+    "created_at": "2026-11-12 09:34:03",
+    "memos": [],
+    "last_error": null
+  },
+  {
+    "id": "7cef62b7-efd2-43b2-8d04-d0aca64acaa5",
+    "kind": "faucet",
+    "direction": "incoming",
+    "from_account": null,
+    "to_account": 1,
+    "from_accounts": [],
+    "to_accounts": [
+      1
+    ],
+    "to_address": null,
+    "recipient_addresses": [
+      "uregtest1zkuzfv5m3yhv2j4fmvq5rjurkxenxyq8r7h4daun2zkznrjaa8ra8asgdm8wwgwjvlwwrxx7347r8w0ee6dqyw4rufw4wg9djwcr6frzkezmdw6dud3wsm99eany5r8wgsctlxquu009nzd6hsme2tcsk0v3sgjvxa70er7h27z5epr67p5q767s2z5gt88paru56mxpm6pwz0cu35m"
+    ],
+    "source_pool": "ironwood",
+    "destination_pool": "ironwood",
+    "source_pools": [
+      "ironwood"
+    ],
+    "destination_pools": [
+      "ironwood"
+    ],
+    "amount_zatoshi": 500000000,
+    "received_zatoshi": 500000000,
+    "spent_zatoshi": 0,
+    "net_zatoshi": 500000000,
+    "txid": "eeab41ca4a202e97f3c9bcbd79c0651290d299ccdcae04c7eaed2e04f3f7a293",
+    "block_hash": "051e38f5a2fa2099eb750d3a7d3d0c48de6bf583568ef8f02ce3bf12f1f232d4",
+    "mined_height": 105,
+    "confirmations": 2,
+    "status": "confirmed",
+    "created_at": "2026-11-12 09:33:35",
+    "memos": [],
+    "last_error": null
+  }
+]

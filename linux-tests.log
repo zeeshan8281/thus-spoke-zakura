@@ -1,0 +1,27 @@
+Unable to find image 'python:3.12-slim' locally
+3.12-slim: Pulling from library/python
+70b4f81c82dc: Pulling fs layer
+0373269344dc: Pulling fs layer
+0ba3a3e89cd9: Pulling fs layer
+acd43e9bebc3: Pulling fs layer
+70b4f81c82dc: Download complete
+0373269344dc: Download complete
+acd43e9bebc3: Download complete
+cf4b30a54e0f: Download complete
+0373269344dc: Pull complete
+acd43e9bebc3: Pull complete
+bdec8a8ca49a: Download complete
+0ba3a3e89cd9: Download complete
+70b4f81c82dc: Pull complete
+0ba3a3e89cd9: Pull complete
+Digest: sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+Status: Downloaded newer image for python:3.12-slim
+Installed ths 9.8.7 to /tmp/ths-install-test.eFKPGY/install
+Installed ths 8.0.0 to /tmp/ths-install-test.eFKPGY/install
+Installed ths 8.0.0 to /tmp/ths-install-test.eFKPGY/install
+Checksum verification failed for ths-aarch64-unknown-linux-gnu.tar.gz
+
+gzip: stdin: not in gzip format
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+installer tests passed

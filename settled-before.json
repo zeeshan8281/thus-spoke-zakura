@@ -1,0 +1,8 @@
+{
+  "node_height": 105,
+  "lightwalletd_height": 105,
+  "wallet_scanned_height": 105,
+  "wallet_sync_state": "ready",
+  "settled": true,
+  "settlement_blocker": null
+}
