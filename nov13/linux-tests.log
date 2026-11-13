@@ -1,0 +1,22 @@
+Installed ths 9.8.7 to /tmp/ths-install-test.AoOG2f/install (docker runtime)
+Installed ths 8.0.0 to /tmp/ths-install-test.AoOG2f/install (docker runtime)
+Installed ths 8.0.0 to /tmp/ths-install-test.AoOG2f/install (docker runtime)
+Missing or ambiguous checksum for ths-aarch64-unknown-linux-gnu.tar.gz
+
+gzip: stdin: not in gzip format
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+installer tests passed
+Installed ths 9.8.7 to /tmp/ths-native-install.fMOowa/install (native runtime)
+Installed ths 9.8.7 to /tmp/ths-native-install.fMOowa/install (native runtime)
+Installed ths 9.8.8 to /tmp/ths-native-install.fMOowa/install (native runtime)
+Installed ths 9.8.9 to /tmp/ths-native-install.fMOowa/install (native runtime)
+Installed ths 9.8.7 to /tmp/ths-native-install.fMOowa/install (native runtime)
+Installed ths 9.8.7 to /tmp/ths-native-install.fMOowa/docker-auto (docker runtime)
+Installed ths 9.8.8 to /tmp/ths-native-install.fMOowa/docker-auto (docker runtime)
+Installed ths 9.8.7 to /tmp/ths-native-install.fMOowa/docker-default (docker runtime)
+Installed ths 9.8.8 to /tmp/ths-native-install.fMOowa/docker-default (docker runtime)
+Installed ths 9.8.7 to /tmp/ths-native-install.fMOowa/install (docker runtime)
+Installed ths 9.8.7 to /tmp/ths-native-install.fMOowa/install (none runtime)
+Installed ths 9.8.7 to /tmp/ths-native-install.fMOowa/historical (docker runtime)
+native installer tests passed

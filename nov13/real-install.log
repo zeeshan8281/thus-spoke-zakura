@@ -1,0 +1,19 @@
+✓ Docker 29.2.0
+✓ Config: /Users/zeeshan/Library/Application Support/com.zakura.thus-spoke-zakura
+Pulling ghcr.io/zcashlabs/thus-spoke-zakura-app:0.4.1…
+0.4.1: Pulling from zcashlabs/thus-spoke-zakura-app
+Digest: sha256:9c4ed78b79d34ffa4c40ce54794f89a1120fdedc652ba7af791e97413a9d176d
+Status: Image is up to date for ghcr.io/zcashlabs/thus-spoke-zakura-app:0.4.1
+ghcr.io/zcashlabs/thus-spoke-zakura-app:0.4.1
+Pulling ghcr.io/zcashlabs/thus-spoke-zakura-lightwalletd:0.4.1…
+0.4.1: Pulling from zcashlabs/thus-spoke-zakura-lightwalletd
+Digest: sha256:8eb718ef81b1121a384a9d321f1b64eab24513a75ca5345718be553df96a8f3f
+Status: Image is up to date for ghcr.io/zcashlabs/thus-spoke-zakura-lightwalletd:0.4.1
+ghcr.io/zcashlabs/thus-spoke-zakura-lightwalletd:0.4.1
+Pulling zakuracore/zakura:1.6.0…
+1.6.0: Pulling from zakuracore/zakura
+Digest: sha256:bf53c178e9549217fce7cfaa21efc85c478129ba6dc5307d55640514affeb0ac
+Status: Image is up to date for zakuracore/zakura:1.6.0
+docker.io/zakuracore/zakura:1.6.0
+Runtime images are ready.
+Installed ths 0.4.1 to /Users/zeeshan/zakura-318-nov13/real-bin (docker runtime)

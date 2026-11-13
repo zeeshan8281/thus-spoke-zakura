@@ -1,0 +1,1 @@
+PASS: confirmed 1 ZEC transfer in active block 106; activity, transaction and block agree; node/lightwalletd/wallet settled at 106.

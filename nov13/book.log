@@ -1,0 +1,6 @@
+ INFO Book building has started
+ INFO Running the html backend
+ INFO HTML book written to `/Users/zeeshan/zakura-fix-318/site/html`
+ INFO Running the markdown backend
+site/public: 12 markdown pages, book.md 169,736 bytes (~42,434 tokens), llms.txt
+ok: 0 broken links in the book
